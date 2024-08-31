@@ -1,0 +1,118 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  //outline: 1px solid red;
+}
+$white-color: white;
+$secondary-color: #25333B;
+$success-color: #28a745;
+$colorGrey: #5d6b8a;
+$colorTitle: #065ea9;
+$error-color: #dc3545;
+$dark-primary-color: #333;
+$dark-hero-color: #3d5360;
+$dark-secondary-color: #f1f1f1;
+$font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-size: 16px;
+$base-spacing: 8px;
+$header-height: 90px;
+$container-max-width: 1200px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$globalBg: url("../../assests/images/body-bg.png");
+body {
+  font-family: $font-stack;
+  font-size: $base-font-size;
+  color: $secondary-color;
+  background-color: #f4f4f4;
+  background-image: $globalBg;
+  overflow-x: hidden;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+.gray-scale {
+  filter: grayscale(100%);
+}
+a {
+  text-decoration: none;
+}
+
+.home {
+  background-image: $globalBg;
+}
+a {
+  text-decoration: none;
+  list-style: none;
+  color: $secondary-color;
+
+
+}
+li{
+  text-decoration: none;
+  list-style: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: $base-spacing;
+}
+
+.mb-1 {
+  margin-bottom: $base-spacing;
+}
+
+.hidden {
+  display: none;
+}
+
+.container{
+  max-width: 100%;
+  width: $container-max-width;
+  margin: 0 auto;
+  position: relative;
+  //border: 1px solid blue;
+}
+
+.scrollToHome{
+  background-color: $dark-hero-color;
+  border-radius: 6px;
+  border: none;
+  bottom: 5%;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  line-height: 45px;
+  position: fixed;
+  right: 45px;
+  text-align: center;
+  text-decoration: none;
+  width: 50px;
+  z-index: 9;
+  font-size: 20px;
+  transform: scale(1);
+  cursor: pointer;
+  &_show{
+    width: 30px;
+    height: 30px;
+  }
+
+
+}
+@mixin fontStyles($weight, $size, $line-height, $color) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
+

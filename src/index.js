@@ -1,17 +1,27 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Routes from './routes';
+import {Provider} from "react-redux";
+
+import "./assests/style/global.scss";
+import "./assests/style/header.scss"
+import "./assests/style/footer.scss"
+import store from "./reduxToolkit/store";
+import {I18nextProvider} from "react-i18next";
+import i18n from "./serves/in18";
+import GrayContextProvider from "./context/GrayContext";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <I18nextProvider i18n={i18n}>
+        <GrayContextProvider>
+            <Suspense fallback="">
+                <Provider store={store}>
+                    <Routes/>
+                </Provider>
+            </Suspense>
+        </GrayContextProvider>
+    </I18nextProvider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+

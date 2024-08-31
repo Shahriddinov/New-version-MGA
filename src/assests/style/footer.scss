@@ -1,0 +1,333 @@
+@import "../../assests/style/global";
+
+.footer {
+  background: $dark-hero-color;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  &_df {
+    display: flex;
+    justify-content: space-between;
+
+    &_cardFooter {
+      width: 23%;
+      height: auto;
+      margin-top: 20px;
+      color: $white-color;
+      font-size: 18px;
+      font-weight: 600;
+
+      &_brand {
+        width: 50%;
+        //height: 40%;
+        margin: 0 auto;
+      }
+
+      &_FTitle {
+        font-weight: 400;
+        font-size: 16px;
+        margin-top: 20px;
+        font-style: normal;
+        line-height: 1.6;
+        color: $white-color;
+      }
+
+      &_link {
+        font-weight: 400;
+        font-size: 16px;
+        font-style: normal;
+        line-height: normal;
+        margin-top: 40px;
+        display: grid;
+        gap: 15px;
+
+        list-style: none;
+
+        &_svg {
+          width: 20px;
+          height: 20px;
+          font-size: 40px;
+        }
+        &_homeIcon{
+          width: 33px;
+          height: 33px;
+        }
+
+        &_icons {
+          display: flex;
+          gap: 30px;
+
+          &_urls {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+              background: #fff;
+
+              &_svg {
+                color: #062a49;
+              }
+            }
+
+            &_svg {
+              color: #fff;
+              font-size: 18px;
+            }
+          }
+
+        }
+
+        li {
+          cursor: pointer;
+          display: flex;
+          gap: 10px;
+
+          a {
+            color: $white-color;
+          }
+        }
+
+        &_FImg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      &_Fserver {
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: normal;
+        margin-top: 10px;
+        display: grid;
+        gap: 15px;
+
+        li {
+          cursor: pointer;
+
+          a {
+            color: $white-color;
+          }
+        }
+      }
+
+    }
+
+
+    &_brandIcon {
+      margin-top: 40px;
+    }
+
+    &_links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+
+      &_ico {
+        width: 26px;
+        height: 25px;
+      }
+    }
+
+
+  }
+
+  &_developer {
+    font-size: 12px;
+    color: $white-color;
+    display: flex;
+    padding-top: 40px;
+    align-items: center;
+    padding-bottom: 30px;
+    justify-content: space-between;
+
+    &_devLog {
+      width: 80px;
+    }
+  }
+
+}
+
+@media (max-width: $breakpoint-sm) {
+  .footer {
+
+    overflow: hidden;
+
+    &_df {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &_cardFooter {
+        width: 100%;
+        border-bottom: 2px solid $dark-secondary-color;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
+
+        &_brand {
+
+          display: flex;
+          //margin: 0 auto;
+        }
+
+        &_FTitle {
+          display: flex;
+          text-align: center;
+        }
+
+        &_link {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          &_homeIcon{
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+      }
+    }
+
+    &_developer {
+      padding: 20px;
+    }
+
+  }
+}
+@media (max-width: $breakpoint-md) {
+  .footer {
+
+    overflow: hidden;
+
+    &_df {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &_cardFooter {
+        width: 100%;
+        padding: 20px;
+        border-bottom: 2px solid $dark-secondary-color;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
+
+        &_brand {
+
+          display: flex;
+          //margin: 0 auto;
+        }
+
+        &_FTitle {
+          display: flex;
+          text-align: center;
+        }
+
+        &_link {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          &_homeIcon{
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+      }
+    }
+
+    &_developer {
+      padding: 20px;
+    }
+
+  }
+}
+@media (max-width: $breakpoint-lg) {
+  .footer {
+
+    overflow: hidden;
+
+    &_df {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &_cardFooter {
+        width: 80%;
+        padding: 20px;
+        border-bottom: 2px solid $dark-secondary-color;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
+
+        &_brand {
+
+          display: flex;
+          //margin: 0 auto;
+        }
+
+        &_FTitle {
+          display: flex;
+          text-align: center;
+        }
+
+        &_link {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          &_homeIcon{
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+      }
+    }
+
+    &_developer {
+      padding: 20px;
+    }
+
+  }
+}
+@media (max-width: $breakpoint-xl) {
+  .footer {
+
+    overflow: hidden;
+
+    &_df {
+      padding: 20px;
+
+
+
+    }
+
+    &_developer {
+      padding: 20px;
+    }
+
+  }
+}

@@ -1,0 +1,95 @@
+@import "../../assests/style/global";
+.language {
+  position: relative;
+
+  &-wrapper {
+    padding: 10px 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 6px;
+    border-radius: 12px;
+    background: $dark-hero-color;
+    cursor: pointer;
+
+  }
+  // Dark mode styles
+  body.dark-mode & {
+
+    &-wrapper {
+      color:$dark-hero-color;
+      background: $dark-secondary-color; // Change this to your dark mode color variable
+    }
+
+    &-lan,
+    &-iconArrow,
+    &-icon{
+      color:$dark-hero-color;
+    }
+    &-bar{
+      border:1px solid $dark-hero-color;
+      background:$dark-secondary-color ;
+      color:$dark-hero-color
+    }
+  }
+&-lan{
+  color:$dark-secondary-color ;
+}
+  &-icon {
+    width: 20px;
+    height: 20px;
+    color: #ffff;
+  }
+
+  &-iconArrow {
+    width: 16px;
+    height: 16px;
+    color: #ffff;
+  }
+
+  & > span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+  }
+
+  &-bar {
+    display: none;
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 75px;
+    right: 0;
+    top: 45px;
+
+    border-radius: 12px;
+    background: $dark-hero-color;
+    color: white;
+    z-index: 99;
+    overflow: hidden;
+
+    & > p {
+      width: 100%;
+      text-align: center;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    & > p:hover {
+      background-color: grey;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../assests/style/global";
+.about{
+  margin-top: 82px;
+  background: $globalBg;
+  position: relative;
+  &_headImg{
+    width: 100%;
+    padding: 20px;// Default background
+    height: 500px;
+    object-fit: contain;
+  }
+  @media (max-width: $breakpoint-sm){
+    &_headImg{
+      width: 100%;
+      padding: 20px;// Default background
+      height: 300px;
+      object-fit: contain;
+    }
+  }
+  @media (max-width: $breakpoint-md){
+    &_headImg{
+      width: 100%;
+      padding: 20px;// Default background
+      height: 320px;
+      object-fit: contain;
+    }
+  }
+  @media (max-width: $breakpoint-lg){
+    &_headImg{
+      width: 100%;
+      padding: 20px;// Default background
+      height: 380px;
+      object-fit: contain;
+    }
+  }
+}

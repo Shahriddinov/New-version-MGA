@@ -1,0 +1,64 @@
+@import "../../assests/style/global";
+.gallery{
+  margin-top: 82px;
+  position: relative;
+
+
+  &_headG{
+    width: 100%;
+    padding: 20px;// Default background
+    height: 500px;
+    object-fit: contain;
+  }
+  &_Items{
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &_imgCard{
+      width: 33%;
+      height: 260px;
+      display: flex;
+      padding: 20px;// Default background
+
+      //justify-content: center;
+    }
+  }
+  @media (max-width: $breakpoint-sm){
+    &_headG{
+      width: 100%;
+      padding: 20px;// Default background
+      height: 300px;
+      object-fit: contain;
+    }
+    &_Items{
+      //flex-direction: column;
+      &_imgCard{
+        width: 50%;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-md){
+    &_headG{
+      width: 100%;
+      padding: 20px;// Default background
+      height: 300px;
+      object-fit: contain;
+    }
+    &_Items{
+      //flex-direction: column;
+      &_imgCard{
+        width: 50%;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-lg){
+    &_headG{
+      width: 100%;
+      padding: 20px;// Default background
+      height: 300px;
+      object-fit: contain;
+    }
+
+  }
+}

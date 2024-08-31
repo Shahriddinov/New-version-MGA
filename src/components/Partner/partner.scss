@@ -1,0 +1,30 @@
+@import "../../assests/style/global";
+.partner{
+
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  display: flex;
+  overflow: hidden;
+
+  justify-content: center;
+  &_cc{
+    width: 20%;
+    height: 80px;
+    border: 1px solid #25333b;
+    align-items: center;
+    display: flex!important;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 16px;
+
+
+    &_sliderImg{
+      width: 80%;
+      display: flex;
+      margin: 0 auto;
+
+    }
+  }
+}
