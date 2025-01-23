@@ -21,6 +21,7 @@ const RoutesContainer = () => (
     <Router>
         <Layout>
             <Suspense fallback={<LoadingPage position="full"/>}>
+
                 <Routes>
                     {routes.map((route, key) => {
                         const RouteComponent = ScrollTop(route.element);

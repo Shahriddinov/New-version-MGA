@@ -28,8 +28,9 @@ const Partner = () => {
     return (
         <div className="partner">
             <div className="container" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", margin: "0 auto" }}>
-                <h1 style={{ marginBottom: "5%" }}>{partnerText}</h1>
+                <h1 style={{ marginBottom: "5%" }} className="partner_h1">{partnerText}</h1>
                 <Swiper
+
                     slidesPerView={7} // Default number of slides to show
                     spaceBetween={30} // Default space between slides
                     modules={[Pagination, Autoplay]}

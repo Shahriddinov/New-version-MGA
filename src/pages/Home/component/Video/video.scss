@@ -6,7 +6,7 @@
   height: auto;
   margin-top: 5%;
   &_link{
-    width: 100%;
+    width: 100vw;
     height: 600px;
   }
   @media (max-width: $breakpoint-sm){
@@ -32,6 +32,8 @@
   }
   @media (max-width: $breakpoint-xl){
     &_link{
+      width: 100vw;
+
       padding: 20px;
       height: 500px;
     }

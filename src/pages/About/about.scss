@@ -5,8 +5,10 @@
   position: relative;
   &_headImg{
     width: 100%;
+    margin: 0 auto;
     padding: 20px;// Default background
-    height: 500px;
+    height: 520px;
+    border-radius: 10px;
     object-fit: contain;
   }
   @media (max-width: $breakpoint-sm){
@@ -33,4 +35,5 @@
       object-fit: contain;
     }
   }
+
 }

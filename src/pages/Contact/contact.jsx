@@ -173,15 +173,26 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="contact-map">
+                <div >
+                    <div className="contact-map" style={{position:"relative",overflow:"hidden"}}><a
+                        href="https://yandex.uz/maps/10335/tashkent/?utm_medium=mapframe&utm_source=maps"
+                        style={{color:"#eee", fontSize:"12px",position:"absolute",top:"0px"}}>Ташкент</a><a
+                        href="https://yandex.uz/maps/10335/tashkent/?ll=69.322203%2C41.303646&mode=whatshere&utm_medium=mapframe&utm_source=maps&whatshere%5Bpoint%5D=69.321825%2C41.303496&whatshere%5Bzoom%5D=16&z=17.2"
+                        style={{color:"#eee",fontSize:"12px",position:"absolute",top:"14px"}}>Улица Махтумкули, 3/4 — Яндекс
+                        Карты</a>
+                        <iframe
+                            className="contact-map-iframe"
+                            src="https://yandex.uz/map-widget/v1/?ll=69.322203%2C41.303646&mode=whatshere&whatshere%5Bpoint%5D=69.321825%2C41.303496&whatshere%5Bzoom%5D=16&z=17.2"
+                            width="100%" height="100%" frameBorder="1" allowFullScreen="true"
+                            style={{position:"relative"}}></iframe>
+                    </div>
+                    {/*<iframe*/}
+                    {/*    title="map"*/}
+                    {/*   */}
+                    {/*    src="https://yandex.com/map-widget/v1/?ll=69.311797%2C41.298890&mode=search&oid=202914034599&ol=biz&z=16"*/}
+                    {/*    width="100%" height="100%" frameBorder="1" allowFullScreen="true"*/}
 
-                    <iframe
-                        title="map"
-                        className="contact-map-iframe"
-                        src="https://yandex.com/map-widget/v1/?ll=69.311797%2C41.298890&mode=search&oid=202914034599&ol=biz&z=16"
-                        width="100%" height="100%" frameBorder="1" allowFullScreen="true"
-
-                    ></iframe>
+                    {/*></iframe>*/}
 
                 </div>
             </div>

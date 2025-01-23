@@ -19,7 +19,6 @@
     height: $header-height;
     padding: 20px;
     font-family: $font-stack;
-    background: $globalBg;
     width: 100%;
 
     &__logo {
@@ -27,7 +26,7 @@
       font-weight: bold;
 
       &__img {
-        max-height: 40px;
+        max-height: 50px;
         width: auto;
       }
     }
@@ -36,6 +35,7 @@
       background: transparent;
       border: none;
       cursor: pointer;
+
     }
 
     &__burger {
@@ -92,6 +92,7 @@
         color: $secondary-color;
         text-decoration: none;
         font-size: 1rem;
+        font-weight: 400;
         transition: color 0.3s, background-color 0.3s;
         padding: 10px 15px;
         border-radius: 5px;
@@ -121,6 +122,43 @@
   }
 }
 
+
+@media (max-width: $breakpoint-xl) {
+  .head {
+    &__header {
+      padding: 20px;
+      align-items: center;
+
+      &__burger {
+        display: flex; // Show burger menu on smaller screens
+      }
+
+      &__nav {
+        display: none; // Hide navigation by default on smaller screens
+
+        &--open {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          position: absolute;
+          top: $header-height;
+          left: 0;
+          background-color: $white-color;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px 0;
+          transition: max-height 0.3s ease;
+          max-height: 300px;
+          overflow-y: auto;
+        }
+        &-list{
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
 @media (max-width: $breakpoint-lg) {
   .head {
     &__header {

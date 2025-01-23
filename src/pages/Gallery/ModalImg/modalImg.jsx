@@ -4,7 +4,7 @@ import React from "react";
 
 const modal = {
     position: "fixed",
-    zIndex: 1,
+    zIndex:33,
     left: 0,
     top: 0,
     width: "100vw",

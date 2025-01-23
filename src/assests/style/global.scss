@@ -24,6 +24,8 @@ $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
+
+
 $globalBg: url("../../assests/images/body-bg.png");
 body {
   font-family: $font-stack;
@@ -31,6 +33,7 @@ body {
   color: $secondary-color;
   background-color: #f4f4f4;
   background-image: $globalBg;
+
   overflow-x: hidden;
   line-height: 1.5;
   margin: 0;
@@ -76,10 +79,34 @@ li{
 
 .container{
   max-width: 100%;
-  width: $container-max-width;
+
   margin: 0 auto;
   position: relative;
   //border: 1px solid blue;
+  @media (min-width: 576px) {
+    max-width: 540px;
+
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1320px;
+  }
+
+
 }
 
 .scrollToHome{

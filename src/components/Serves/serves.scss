@@ -147,18 +147,22 @@
       height: 300px;
      &_texts{
 
-       font-size: 24px;
+       font-size: 20px!important;
        font-weight: 900;
      }
     }
     &_card{
-
-      margin-top: 30% ;
+      margin-top: 55% !important;
       padding: 20px;
 
       &_item{
         width: 45%;
         height: auto;
+        &_name{
+          font-size: 16px;
+          display: flex;
+          flex-direction: column;
+        }
       }
     }
   }
@@ -173,7 +177,7 @@
     }
     &_card{
 
-      margin-top: 25% ;
+      margin-top: 50% !important;
       padding: 25px;
 
       &_item{
@@ -192,9 +196,11 @@
      }
     }
     &_card{
-      margin-top: 22% ;
+      margin-top: 42% !important ;
       padding: 20px;
 
     }
   }
+
+
 }
