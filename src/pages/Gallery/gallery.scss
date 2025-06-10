@@ -1,65 +1,15 @@
-@import "../../assests/style/global";
-.gallery{
-  margin-top: 82px;
+.gal-title{
   position: relative;
 
-
-  &_headG{
-    width: 100%;
-    padding: 20px;// Default background
-    height: 500px;
-    object-fit: contain;
+  max-width: 800px;
+  margin: 60px auto 50px;
+  text-align: center;
+  .textGal{
+    color: #50575e;
+    font-family: 'Bitter', serif;
+    font-size: 14px;
+    font-style: italic;
+    position: relative;
+    line-height: 1.8em;
   }
-  &_Items{
-   display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    &_imgCard{
-      width: 33%;
-      height: 260px;
-      display: flex;
-      padding: 20px;// Default background
-
-      //justify-content: center;
-    }
-  }
-  @media (max-width: $breakpoint-sm){
-    &_headG{
-      width: 100%;
-      padding: 20px;// Default background
-      height: 300px;
-      object-fit: contain;
-    }
-    &_Items{
-      //flex-direction: column;
-      &_imgCard{
-        width: 50%;
-      }
-    }
-  }
-  @media (max-width: $breakpoint-md){
-    &_headG{
-      width: 100%;
-      padding: 20px;// Default background
-      height: 300px;
-      object-fit: contain;
-    }
-    &_Items{
-      //flex-direction: column;
-      &_imgCard{
-        width: 50%;
-      }
-    }
-  }
-  @media (max-width: $breakpoint-lg){
-    &_headG{
-      width: 100%;
-      padding: 20px;// Default background
-      height: 300px;
-      object-fit: contain;
-    }
-
-  }
-
 }

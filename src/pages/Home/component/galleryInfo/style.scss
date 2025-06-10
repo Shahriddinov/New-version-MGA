@@ -1,0 +1,29 @@
+.galleryInfo {
+  margin-top: 10%;
+  position: relative;
+  .sec-title {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+    .gal-title{
+      position: relative;
+      font-size: 32px;
+      font-weight: 700;
+      color: #253d4a;
+      line-height: 1.4em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      .themes{
+        color: #71b100;
+      }
+    }
+    .texts{
+      margin-top: 30px;
+      color: #50575e;
+      font-family: 'Bitter', serif;
+      font-size: 14px;
+      font-style: italic;
+    }
+  }
+}

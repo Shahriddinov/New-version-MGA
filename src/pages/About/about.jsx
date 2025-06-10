@@ -1,34 +1,82 @@
-import React from 'react';
+import React from "react";
 import "./about.scss";
-import aboutImg from "../../assests/images/4.jpg";
-import Company from "../../components/Company/company";
-import { motion } from 'framer-motion';
+import aboutimg from "../../assests/images/featured-image-1.jpg";
+import { FaCheck } from "react-icons/fa";
+import Feedback from "../../components/Feedback";
+import Partner from "../../components/Partner";
 
 const About = () => {
-    const imgVariants = {
-        hidden: { opacity: 0, y: 0.5 }, // Boshlang'ich holat: pastroqda va ko'rinmas
-        visible: { opacity: 1, y: 1 }, // Ko'rinadigan holat: asl joyiga chiqadi
-    };
-
-    return (
-        <div className="about">
-            <div className="container">
-                <motion.div className="about_headImg">
-                    <motion.img
-                        src={aboutImg}
-                        alt=""
-                        width="100%"
-                        height="100%"
-                        variants={imgVariants} // Animatsiya variantlari
-                        initial="hidden" // Boshlang'ich holat
-                        animate="visible" // Animatsiya boshlash holati
-                        transition={{ duration: 2, ease: "easeOut" }} // Animatsiya vaqti
-                    />
-                </motion.div>
-                <Company />
-            </div>
-        </div>
-    );
+    return <>
+       <section className="about-section">
+           <div className="auto-container">
+               <div className="about-titles">
+                   <h2 className="tit">WELCOME TO <strong className="strongs">MGA REKLAMA</strong></h2>
+                   <div className="subDes">
+                       There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                       alteration in some form, by injected humour, or randomised words
+                   </div>
+               </div>
+               <figure className="full-image">
+                   <img decoding="async" src={aboutimg} width="100%" alt="about images"/>
+               </figure>
+               <div className="services-outer">
+                   <div className="row clearfix">
+                       <article className="column col-4">
+                           <div className="inner-about">
+                               <div className="icon-left">
+                                   <div className="checkIcon">
+                                       <FaCheck/>
+                                   </div>
+                                   <span className="numbers">1</span>
+                               </div>
+                               <div className="contents-about">
+                                   <h3 className="sup">LIFETIME SUPPORT</h3>
+                                   <p className="about-des">
+                                       Lorem ipsum dolor sit amet, et sectetu adipiscing elit, sed do lilae eiusmod at tempor.
+                                   </p>
+                               </div>
+                           </div>
+                       </article>
+                       <article className="column col-4">
+                           <div className="inner-about">
+                               <div className="icon-left">
+                                   <div className="checkIcon">
+                                       <FaCheck/>
+                                   </div>
+                                   <span className="numbers">1</span>
+                               </div>
+                               <div className="contents-about">
+                                   <h3 className="sup">Largest Community</h3>
+                                   <p className="about-des">
+                                       Lorem ipsum dolor sit amet, et sectetu adipiscing elit, sed do lilae eiusmod at tempor.
+                                   </p>
+                               </div>
+                           </div>
+                       </article>
+                       <article className="column col-4">
+                           <div className="inner-about">
+                               <div className="icon-left">
+                                   <div className="checkIcon">
+                                       <FaCheck/>
+                                   </div>
+                                   <span className="numbers">1</span>
+                               </div>
+                               <div className="contents-about">
+                                   <h3 className="sup">24 HOURS SERVICE</h3>
+                                   <p className="about-des">
+                                       Lorem ipsum dolor sit amet, et sectetu adipiscing elit, sed do lilae eiusmod at
+                                       tempor.
+                                   </p>
+                               </div>
+                           </div>
+                       </article>
+                   </div>
+               </div>
+           </div>
+       </section>
+       <Feedback/>
+       <Partner/>
+   </>
 };
 
 export default About;

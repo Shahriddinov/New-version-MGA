@@ -1,0 +1,77 @@
+.page-hero {
+  background-image: url("../../assests/images/page-title-bg-1.jpg");
+  position: relative;
+  padding: 70px 0px 76px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.30);
+    z-index: 0;
+  }
+
+  .content-box {
+    position: relative;
+    display: inline-block;
+    max-width: 500px;
+    min-width: 180px;
+    padding: 15px 25px 20px;
+    background: #ffffff;
+
+    .title-pages {
+      position: relative;
+      font-size: 32px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #222222;
+      line-height: 1.8em;
+    }
+    .bread-crumb{
+      position: relative;
+      color: #353535;
+    }
+    .pull-right{
+      background: none;
+      float: none !important;
+      margin-bottom: 0;
+      padding: 0;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      .breads{
+        display: inline-block;
+        margin: 0px 3px;
+        color: #aaaaaa;
+        font-style: italic;
+        font-family: 'Bitter', serif;
+        &:hover{
+          color: #555555;
+        }
+      }
+      .main-hero{
+        &::before{
+          padding: 0 5px;
+          color: #ccc;
+          content: "/\00a0";
+        }
+      }
+    }
+  &::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+  }
+  }
+}

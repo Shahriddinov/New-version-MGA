@@ -1,213 +1,182 @@
-@import "../../assests/style/global";
-
 .contact {
-  margin-top: 82px;
-  position: relative;
-  padding: 20px;
-
-  &_imgC {
-    width: 100%;
-    height: 500px;
-    object-fit: contain;
+  &-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #23282a;
+    text-transform: uppercase;
+    line-height: 1.8em;
+    padding: 70px 0px 20px;
   }
 
-
-  &-action {
-
-    padding: 30px 0 70px;
-    display: flex;
-    justify-content: space-between;
-
-    &-title {
-      margin-bottom: 30px;
-      @include fontStyles(700, 24px, 29px, #161616);
-    }
-
-    &-form {
-      max-width: 360px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-
-      &-btn {
-        padding: 12px 22px;
-        background: #065ea9;
-        border-radius: 16px;
-        border: none;
-        cursor: pointer;
-        @include fontStyles(500, 14px, 24px, #ffffff);
-
-        &-wrapper {
-          display: flex;
-        }
-      }
-
-      & input,
-      textarea {
-        outline: none;
-        border: 1px solid #eaedf6;
-        border-radius: 15px;
-        @include fontStyles(400, 14px, 17px, $colorGrey);
-
-        &::placeholder {
-          @include fontStyles(400, 14px, 17px, $colorGrey);
-        }
-      }
-
-      &-nameInput {
-        height: 48px;
-        padding: 0 16px;
-      }
-
-      &-numberInput {
-        padding: 0 16px;
-        display: flex;
-        align-items: center;
-        height: 48px;
-        border-radius: 15px;
-        border: 1px solid #eaedf6;
-
-        & > div {
-          width: 40px;
-          height: 40px;
-
-          & > select {
-            display: none;
-          }
-
-          .PhoneInputCountryIcon {
-            display: flex;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-
-            & > svg,
-            img {
-              width: 28px;
-              height: 28px;
-              object-fit: cover;
-              border-radius: 5px;
-            }
-          }
-        }
-
-        & > input {
-          height: 100%;
-          width: 100%;
-          border: none;
-          border-radius: 0;
-        }
-
-        & > img {
-          margin-right: 6px;
-          border-radius: 2.5px;
-        }
-      }
-
-      &-areaInput {
-        resize: none;
-        padding: 12px 16px;
-        width: 100%;
-        height: 100px;
-      }
-    }
-
-    &-address {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-
-      &-item {
-        display: flex;
-        flex-direction: column;
-
-        & > span {
-          margin-bottom: 10px;
-          @include fontStyles(400, 18px, 22px, $colorGrey);
-        }
-
-        & > strong,
-        a {
-          text-decoration: none;
-          @include fontStyles(700, 18px, 22px, #062a49);
-        }
-
-        & > strong:not(:last-child),
-        a:not(:last-child) {
-          margin-bottom: 15px;
-        }
-      }
-    }
-  }
-
-  &-map {
+  .descCon {
     position: relative;
-    width: 100%;
-    height: 283px;
-    //border-radius: 50px 50px 0 0;
-    overflow: hidden;
+    line-height: 1.8em;
+    margin-bottom: 40px;
+    font-size: 14px;
+    font-family: 'Bitter', serif;
+  }
 
-    &-iframe {
+  .row {
+    display: flex;
+
+    .col-4-cont {
+      width: 33%;
+      position: relative;
+      min-height: 50px;
+      margin-bottom: 25px;
+      padding-left: 90px;
+
+      .contI {
+        width: 50px;
+        font-size: 18px;
+        height: 50px;
+        background-color: #71b100 !important;
+        color: #ffffff;
+        border-radius: 50%;
+        position: absolute;
+        left: 15px;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .contIcon {
+          width: 30px;
+          font-size: 18px;
+          height: 30px;
+          line-height: 50px;
+          color: #ffffff;
+
+
+        }
+      }
+
+      .address {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+        color: #000000;
+        font-weight: 700;
+      }
+
+      .addDes {
+        position: relative;
+        line-height: 1.8em;
+      }
+    }
+  }
+  .contact-map{
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+  }
+  .default-section{
+    background-image: url("../../assests/images/contact-bg.jpg");
+    position: relative;
+    padding: 70px 0 0;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    z-index: 3;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
       width: 100%;
       height: 100%;
-      z-index: 1;
-      //opacity: 0.7;
+      background: rgba(255, 255, 255, 0.85);
+      z-index: 0;
+
     }
-  }
-
-  @media (max-width: $breakpoint-sm) {
-    &_imgC {
-      height: 250px;
+    .sectitle{
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto 50px;
+      text-align: center;
+      .formCont{
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: #23282a;
+        text-transform: uppercase;
+      }
+      .contText{
+        color: #50575e;
+        font-family: 'Bitter', serif;
+        font-size: 14px;
+        font-style: italic;
+        position: relative;
+        line-height: 1.8em;
+      }
     }
-    &-action {
-      display: flex;
-      gap: 30px;
-      flex-direction: column;
+    .contact-form{
+      margin-bottom: 60px;
+      padding-bottom: 50px;
+      position: relative;
+      .rowForm{
+        display: flex;
+        justify-content: space-between;
 
-      &-form {
-        max-width: 100%;
 
-        &-nameInput {
-          width: 100%;
+        .colForm-4{
+          width: 33%;
+          position: relative;
+          margin-bottom: 15px;
+          .formInput{
+            position: relative;
+            display: block;
+            width: 100%;
+            line-height: 24px;
+            padding: 9px 15px;
+            border: 1px solid #d5d5d5;
+            font-size: 14px;
+            color: #252525;
+            border-radius: 3px;
+            outline-color: #71b100;
+          }
+        }
+      }
+      textarea{
+        height: 180px;
+        resize: none;
+        position: relative;
+        display: block;
+        width: 100%;
+        line-height: 24px;
+        padding: 9px 15px;
+        border: 1px solid #d5d5d5;
+        font-size: 14px;
+        color: #252525;
+        border-radius: 3px;
+      }
+      .sendForm{
+        background-color: #71b100;
+        border: 2px solid #71b100 !important;
+        border-radius: 3px;
+        color: #ffffff !important;
+        min-width: 100px;
+        padding: 12px 50px;
+
+        font-size: 11px;
+        font-style: normal;
+        line-height: 20px;
+        position: relative;
+        text-transform: uppercase;
+       display: flex;
+        margin: 50px auto;
+        margin-bottom: 50px;
+        transition: all 500ms ease 0s;
+        &:hover{
+          background-color: #ffffff !important;
+          color: #71b100 !important;
+
         }
       }
     }
   }
-  @media (max-width: $breakpoint-md) {
-    &_imgC {
-      height: 280px;
-    }
-    &-action {
-      display: flex;
-      gap: 30px;
-      flex-direction: column;
-
-      &-form {
-        max-width: 100%;
-
-        &-nameInput {
-          width: 100%;
-        }
-      }
-    }
-  }
-  @media (max-width: $breakpoint-lg) {
-    &_imgC {
-      height: 300px;
-    }
-    &-action {
-      display: flex;
-      gap: 30px;
-      flex-direction: column;
-
-      &-form {
-        max-width: 100%;
-
-        &-nameInput {
-          width: 100%;
-        }
-      }
-    }
-  }
-
 }

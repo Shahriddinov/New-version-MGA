@@ -1,39 +1,94 @@
-@import "../../assests/style/global";
-.about{
-  margin-top: 82px;
-  background: $globalBg;
+.about-section{
   position: relative;
-  &_headImg{
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;// Default background
-    height: 520px;
-    border-radius: 10px;
-    object-fit: contain;
-  }
-  @media (max-width: $breakpoint-sm){
-    &_headImg{
-      width: 100%;
-      padding: 20px;// Default background
-      height: 300px;
-      object-fit: contain;
-    }
-  }
-  @media (max-width: $breakpoint-md){
-    &_headImg{
-      width: 100%;
-      padding: 20px;// Default background
-      height: 320px;
-      object-fit: contain;
-    }
-  }
-  @media (max-width: $breakpoint-lg){
-    &_headImg{
-      width: 100%;
-      padding: 20px;// Default background
-      height: 380px;
-      object-fit: contain;
-    }
-  }
+  background: #ffffff;
+  padding: 70px 0 30px;
+  .about-titles{
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+    .tit{
+      position: relative;
+      font-size: 32px;
+      font-weight: 700;
+      color: #253d4a;
+      line-height: 1.4em;
 
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      .strongs{
+        color: #71b100;
+      }
+    }
+    .subDes{
+      color: #50575e;
+      font-family: 'Bitter', serif;
+      font-size: 14px;
+      font-style: italic;
+    }
+  }
+  .full-image{
+    max-width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+    outline: 4px solid #ffffff;
+    outline-offset: -15px;
+  }
+  .services-outer{
+    position: relative;
+    .row{
+      display: flex;
+      .col-4{
+        width: 33.3%;
+        .inner-about{
+          position: relative;
+          padding-left: 60px;
+          .icon-left{
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding-top: 4px;
+            width: 36px;
+            text-align: center;
+            .checkIcon{
+              position: relative;
+              display: block;
+              width: 36px;
+              height: 36px;
+              background: #71b100;
+              line-height: 36px;
+              font-size: 18px;
+              color: #ffffff;
+              margin-bottom: 20px;
+            }
+            .numbers{
+              position: relative;
+              color: #e1e1e1;
+              font-size: 48px;
+              font-weight: 700;
+              display: none;
+            }
+          }
+          .contents-about{
+            .sup{
+              color: #253d4a;
+              font-size: 14px;
+              font-weight: 700;
+              text-transform: uppercase;
+              margin-bottom: 8px;
+            }
+            .about-des{
+              position: relative;
+              line-height: 1.8em;
+              padding-right: 10px;
+            }
+          }
+        }
+      }
+      .column{
+        position: relative;
+        margin-bottom: 30px;
+      }
+    }
+  }
 }

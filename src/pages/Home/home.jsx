@@ -1,30 +1,20 @@
-import React, {useEffect} from 'react';
-import "./home.scss"
+import React, { useEffect } from "react";
+import "./home.scss";
 import Hero from "../../components/Hero/hero";
-import {useDispatch, useSelector} from "react-redux";
-import {getSlider} from "../../reduxToolkit/sliderSlice";
-import Company from "../../components/Company/company";
-import Serves from "../../components/Serves/serves";
-import Video from "./component/Video/video";
-import Partner from "../../components/Partner/partner";
-
+import Info from "./component/Info";
+import Services from "../../components/Services";
+import GalleryInfo from "./component/galleryInfo";
+import Feedback from "../../components/Feedback";
+import Partner from "../../components/Partner";
 const Home = () => {
-    const dispatch = useDispatch();
-    const sliderData = useSelector((state) => state.sliderSlice.sliderData);
-    const error = useSelector((state) => state.sliderSlice.error);
-    const loading = useSelector((state) => state.sliderSlice.loading);
-    useEffect(() => {
-            dispatch(getSlider());
-    }, [dispatch]);
-    return (
-        <div className="home">
-            <Hero sliderData={sliderData} error={error} loading={loading}/>
-            <Company/>
-            <Serves/>
-            <Video/>
-
-        </div>
-    );
+  return <div className="home">
+    <Hero/>
+    <Info/>
+    <Services/>
+    <GalleryInfo/>
+    <Feedback/>
+    <Partner/>
+  </div>;
 };
 
 export default Home;

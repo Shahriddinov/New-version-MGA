@@ -6,6 +6,7 @@ import Layout from "./components/Layout/Layout";
 
 const Home = lazy(() => import("./pages/Home/home"));
 const About = lazy(() => import("./pages/About/about"));
+const Serves = lazy(() => import("./pages/Serves"));
 const Gallery = lazy(() => import("./pages/Gallery/gallery"));
 const Contact = lazy(() => import("./pages/Contact/contact"));
 
@@ -13,6 +14,7 @@ const Contact = lazy(() => import("./pages/Contact/contact"));
 const routes = [
     {path: "/", element: Home},
     {path: "/about", element: About},
+    {path: "/serves", element: Serves},
     {path: "/gallery", element: Gallery},
     {path: "/contact", element: Contact},
 

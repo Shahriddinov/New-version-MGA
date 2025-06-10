@@ -1,145 +1,130 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
   margin: 0;
   padding: 0;
   max-width: 100%;
+
   box-sizing: border-box;
-  //outline: 1px solid red;
 }
-$white-color: white;
-$secondary-color: #25333B;
-$success-color: #28a745;
-$colorGrey: #5d6b8a;
-$colorTitle: #065ea9;
-$error-color: #dc3545;
-$dark-primary-color: #333;
-$dark-hero-color: #3d5360;
-$dark-secondary-color: #f1f1f1;
-$font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$base-font-size: 16px;
-$base-spacing: 8px;
-$header-height: 90px;
-$container-max-width: 1200px;
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-
-$globalBg: url("../../assests/images/body-bg.png");
 body {
-  font-family: $font-stack;
-  font-size: $base-font-size;
-  color: $secondary-color;
-  background-color: #f4f4f4;
-  background-image: $globalBg;
-
   overflow-x: hidden;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: #656d70;
+  line-height: 1.8em;
+  font-weight: 400;
+  background: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-font-smoothing: antialiased;
 }
-.gray-scale {
-  filter: grayscale(100%);
-}
-a {
-  text-decoration: none;
-}
-
-.home {
-  background-image: $globalBg;
-}
-a {
-  text-decoration: none;
-  list-style: none;
-  color: $secondary-color;
-
-
-}
-li{
-  text-decoration: none;
-  list-style: none;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.mt-1 {
-  margin-top: $base-spacing;
-}
-
-.mb-1 {
-  margin-bottom: $base-spacing;
-}
-
-.hidden {
-  display: none;
-}
-
-.container{
-  max-width: 100%;
-
-  margin: 0 auto;
-  position: relative;
-  //border: 1px solid blue;
-  @media (min-width: 576px) {
-    max-width: 540px;
-
-  }
-
-  @media (min-width: 768px) {
-    max-width: 720px;
-
-  }
-
-  @media (min-width: 992px) {
-    max-width: 960px;
-
-  }
-
-  @media (min-width: 1200px) {
-    max-width: 1140px;
-  }
-
-  @media (min-width: 1440px) {
-    max-width: 1320px;
-  }
-
-
-}
-
 .scrollToHome{
-  background-color: $dark-hero-color;
-  border-radius: 6px;
-  border: none;
-  bottom: 5%;
-  color: #ffffff;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  color: #71b100;
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 45px;
-  line-height: 45px;
-  position: fixed;
-  right: 45px;
   text-align: center;
-  text-decoration: none;
-  width: 50px;
-  z-index: 9;
-  font-size: 20px;
-  transform: scale(1);
+  line-height: 50px;
+  border-radius: 50%;
+  z-index: 99;
+  font-size: 25px;
   cursor: pointer;
-  &_show{
-    width: 30px;
-    height: 30px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  &:hover{
+    color: #fff;
+    background: #71b100;
   }
-
-
 }
-@mixin fontStyles($weight, $size, $line-height, $color) {
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $line-height;
-  color: $color;
+/* Scrollbar container */
+::-webkit-scrollbar {
+  width: 10px; /* kengligi */
 }
 
+/* Scrollbar track (foni) */
+::-webkit-scrollbar-track {
+  background: #71b100; /* fon rangi */
+}
+
+/* Scrollbar thumb (scrollbarning tutib olinadigan qismi) */
+::-webkit-scrollbar-thumb {
+  background: #71b100; /* thumb rangi */
+  border-radius: 6px; /* radius qo'shish */
+}
+
+/* Scrollbar thumb ustiga hover bo'lganda */
+::-webkit-scrollbar-thumb:hover {
+  background: #71b100; /* hover qilinganda thumb rangi */
+}
+
+
+
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none;
+  outline: none;
+}
+li{
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  margin: 0px;
+  background: none;
+  line-height: 1.8em;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: "Montserrat", sans-serif;
+}
+.auto-container {
+  position: static;
+  max-width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+  &::before {
+    display: table;
+    content: " ";
+  }
+}
+
+.small-container {
+  max-width: 1030px;
+}
+.page-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 300px;
+}

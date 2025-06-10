@@ -1,189 +1,123 @@
 @import "../../assests/style/global";
 
 .hero {
-  width: 100%;
-  height: 88%;
-
+  width: 100vw;
+  height: 100vh;
   position: relative;
+  z-index: 1;
+  border: 1px solid white;
 
-  &_box {
+  .carouselContainer {
     width: 100%;
-    height: 100%; // Adjust height to 100% to fill the parent
-    position: relative;
+    height: 100%;
+    z-index: 1;
 
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: white; // tugma rangi
+      width: 50px;
+      height: 50px;
+      background: rgba(0, 0, 0, 0.5); // orqa fon shaffof
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.3s;
 
-    &_swiper {
-      width: 100%; // Adjust width to fill the parent container
-      height: 100%; // Adjust height to fill the parent container
-      margin-top: 30px;
+      &:hover {
+        background: rgba(0, 0, 0, 0.8);
+      }
+
+      &::after {
+        font-size: 20px; // default icon o‘lchami
+      }
+    }
+
+    .swiperItem {
+      width: 100vw !important;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100vh; // yoki kerakli o‘lcham
+      background-size: cover;
+      background-position: center;
       position: relative;
-
-
-      .swiper-button-next,
-      .swiper-button-prev {
-        color: $white-color;
-        position: absolute;
-        background-color: $dark-hero-color;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 12px;
-        bottom: 0;
-        right: 0;
-        z-index: 1;
-        transition: all 0.3s ease; /* Smooth transition for hover effect */
-      }
-
-      .swiper-button-next_icon {
-        color: white;
-        font-size: 24px;
-      }
-
-      .swiper-button-prev {
-        right: 50px;
-        z-index: 99;
-      }
-
-      .swiper-button-next::after,
-      .swiper-button-prev::after {
-        font-weight: bold;
-        font-size: 20px;
-      }
-
-      // Optional: Adding hover effects
-      .swiper-button-next:hover,
-      .swiper-button-prev:hover {
-        background-color: lighten($dark-hero-color, 10%);
-      }
+      z-index: 1;
+      //.overlay {
+      //  position: absolute;
+      //  top: 0;
+      //  left: 0;
+      //  width: 100%;
+      //  height: 100%;
+      //  background: rgba(0, 0, 0, 0.4); // mat shaffof fon
+      //  display: flex;
+      //  flex-direction: column;
+      //  justify-content: center;
+      //  align-items: center;
+      //  color: #fff;
+      //  z-index: 1;
+      //
+      //  h2 {
+      //    font-size: 2rem;
+      //    margin: 0;
+      //  }
+      //
+      //  p {
+      //    font-size: 1rem;
+      //  }
+      //}
     }
   }
+}
+
+@media (max-width: 430px) {
+  .hero {
+    height: 500px;
 
 
-  @media (max-width: $breakpoint-xl) {
-    .hero {
-      height: 70%; // Adjust the height for mobile screens if needed
+    .slide {
+      height: 500px;
+    }
 
-      &_box {
+    .swiper-wrapper {
+      height: 500px;
+    }
 
-        &_swiper {
-
-          padding: 20px;
-          margin-top: 15px; // Adjust the margin for mobile
-          .swiper-button-next,
-          .swiper-button-prev {
-            width: 35px; // Smaller buttons for mobile
-            height: 35px;
-            font-size: 10px;
-          }
-          .swiper-button-prev {
-            right: 65px; // Adjust position for mobile
-          }
-          .swiper-button-next {
-            right: 25px; // Adjust position for mobile
-          }
-          .swiper-button-next_icon {
-            font-size: 20px; // Smaller icons for mobile
-          }
-        }
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 40px!important;
+      height: 40px!important;
+      &::after {
+        font-size: 18px!important; // default icon o‘lchami
       }
+
+
     }
   }
-  // Media query for larger screens
-  @media (min-width: $breakpoint-md) {
-    .hero {
-      height: 88%;
+}
+@media (max-width: 768px){
+  .hero {
+    height: 800px;
+
+
+    .slide {
+      height: 800px;
     }
-  }
 
-  @media (max-width: $breakpoint-lg) {
-    .hero {
-      height: 70%; // Adjust the height for mobile screens if needed
-
-      &_box {
-
-        &_swiper {
-
-          padding: 20px;
-          margin-top: 15px; // Adjust the margin for mobile
-          .swiper-button-next,
-          .swiper-button-prev {
-            width: 30px; // Smaller buttons for mobile
-            height: 30px;
-            font-size: 10px;
-          }
-          .swiper-button-prev {
-            right: 60px; // Adjust position for mobile
-          }
-          .swiper-button-next {
-            right: 25px; // Adjust position for mobile
-          }
-          .swiper-button-next_icon {
-            font-size: 20px; // Smaller icons for mobile
-          }
-        }
-      }
+    .swiper-wrapper {
+      height: 800px;
     }
-  }
-  // Media query for mobile screens
-  @media (max-width: $breakpoint-md) {
-    .hero {
-      height: 70%; // Adjust the height for mobile screens if needed
 
-      &_box {
-
-        &_swiper {
-
-          padding: 30px;
-          margin-top: 15px; // Adjust the margin for mobile
-          .swiper-button-next,
-          .swiper-button-prev {
-            width: 30px; // Smaller buttons for mobile
-            height: 30px;
-            font-size: 10px;
-          }
-          .swiper-button-prev {
-            right: 65px; // Adjust position for mobile
-          }
-          .swiper-button-next {
-            right: 30px; // Adjust position for mobile
-          }
-          .swiper-button-next_icon {
-            font-size: 20px; // Smaller icons for mobile
-          }
-        }
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 40px!important;
+      height: 40px!important;
+      &::after {
+        font-size: 18px!important; // default icon o‘lchami
       }
-    }
-  }
 
-  // Media query for extra small screens (e.g., very small mobile devices)
-  @media (max-width: $breakpoint-sm) {
-    .hero {
-      height: 60%; // Adjust the height for extra small screens if needed
 
-      &_box {
-        &_swiper {
-          padding: 20px;
-          margin-top: 10px; // Adjust the margin for extra small screens
-          .swiper-button-next,
-          .swiper-button-prev {
-            width: 25px; // Even smaller buttons for extra small screens
-            height: 25px;
-            font-size: 8px;
-          }
-          .swiper-button-prev {
-            right: 55px; // Adjust position for mobile
-          }
-          .swiper-button-next {
-            right: 20px; // Adjust position for mobile
-          }
-          .swiper-button-next_icon {
-            font-size: 18px; // Smaller icons for extra small screens
-          }
-        }
-      }
     }
   }
 }

@@ -1,4 +1,4 @@
-@import "../../assests/style/global";
+@import "../../assests/style/global.scss";
 .language {
   position: relative;
 
@@ -12,32 +12,30 @@
     align-items: center;
     gap: 6px;
     border-radius: 12px;
-    background: $dark-hero-color;
+    background: $colorTitle;
     cursor: pointer;
-
   }
   // Dark mode styles
   body.dark-mode & {
-
     &-wrapper {
-      color:$dark-hero-color;
-      background: $dark-secondary-color; // Change this to your dark mode color variable
+      color: $secondary-color;
+      background: $secondary-color; // Change this to your dark mode color variable
     }
 
     &-lan,
     &-iconArrow,
-    &-icon{
-      color:$dark-hero-color;
+    &-icon {
+      color: $white-color;
     }
-    &-bar{
-      border:1px solid $dark-hero-color;
-      background:$dark-secondary-color ;
-      color:$dark-hero-color
+    &-bar {
+      border: 1px solid $secondary-color;
+      background: $secondary-color;
+      color: $secondary-color;
     }
   }
-&-lan{
-  color:$dark-secondary-color ;
-}
+  &-lan {
+    color: $white-color;
+  }
   &-icon {
     width: 20px;
     height: 20px;
@@ -57,7 +55,6 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-
   }
 
   &-bar {
@@ -75,22 +72,26 @@
     top: 45px;
 
     border-radius: 12px;
-    background: $dark-hero-color;
+    background: $colorTitle;
     color: white;
-    z-index: 99;
+    z-index: 10;
     overflow: hidden;
+    &:hover {
+      background: #2d984b;
+      transition: 0.5s;
+    }
 
     & > p {
       width: 100%;
       text-align: center;
       padding: 5px;
+      color: $white-color;
       cursor: pointer;
     }
 
     & > p:hover {
-      background-color: grey;
+      background-color: $dark-primary-color;
       color: white;
     }
   }
-
 }

@@ -1,333 +1,117 @@
-@import "../../assests/style/global";
+.footer{
+  position: relative;
+  background-color: #1a1d1f;
+  .top-footer{
+    padding-bottom: 20px;
+    padding-top: 115px;
+    .row{
+      display: flex;
+      .col-3{
+        width: 25%;
+        margin-bottom: 40px;
 
-.footer {
-  background: $dark-hero-color;
-  display: flex;
-  height: auto;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-
-  &_df {
-    display: flex;
-    justify-content: space-between;
-
-    &_cardFooter {
-      width: 23%;
-      height: auto;
-      margin-top: 20px;
-      color: $white-color;
-      font-size: 18px;
-      font-weight: 600;
-
-      &_brand {
-        width: 50%;
-        //height: 40%;
-        margin: 0 auto;
-      }
-
-      &_FTitle {
-        font-weight: 400;
-        font-size: 16px;
-        margin-top: 20px;
-        font-style: normal;
-        line-height: 1.6;
-        color: $white-color;
-      }
-
-      &_link {
-        font-weight: 400;
-        font-size: 16px;
-        font-style: normal;
-        line-height: normal;
-        margin-top: 40px;
-        display: grid;
-        gap: 15px;
-
-        list-style: none;
-
-        &_svg {
-          width: 20px;
-          height: 20px;
-          font-size: 40px;
+        .widget{
+          margin-bottom: 30px;
+          .footLog{
+            width: 160px;
+          }
         }
-        &_homeIcon{
-          width: 33px;
-          height: 33px;
+        .textWidget{
+          color: #c1c1c1;
+          font-size: 14px;
+          line-height: 1.8em;
+          font-family: 'Bitter', serif;
+          font-style: italic;
         }
-
-        &_icons {
-          display: flex;
-          gap: 30px;
-
-          &_urls {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            border: 1px solid #fff;
-            cursor: pointer;
-            transition: 0.3s;
-
-            &:hover {
-              background: #fff;
-
-              &_svg {
-                color: #062a49;
+        .widget-title{
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 11px;
+          margin-bottom: 40px;
+          text-transform: uppercase;
+          position: relative;
+          color: rgba(255, 255, 255, 0.9);
+        }
+        .menuFooter{
+          .two-footer{
+            margin-bottom: 1rem;
+            .two-item{
+              color: #c1c1c1;
+              margin-bottom: 0.8rem;
+              font-size: 16px;
+              transition: 0.5s;
+              &:hover{
+                color: #71b100;
+                transition: 0.5s;
               }
             }
-
-            &_svg {
-              color: #fff;
+          }
+        }
+        .subscribe-area{
+          margin-bottom: 20px;
+          position: relative;
+          .form-group{
+            margin-bottom: 10px;
+            .form-control{
+              width: 100%;
+              background-color: transparent;
+              padding-left: 25px;
+              padding-top: 25px;
               font-size: 18px;
+              border: none;
+              border-radius: 0;
+              outline: none;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+              color: #fff;
+              &::placeholder{
+                font-size: 18px;
+              }
+            }
+            .emailIcon{
+              position: absolute;
+              left: 0;
+              top: 70%;
+              font-size: 18px;
+              transform: translateY(-50%);
+              font-weight: 600;
+              color: rgba(255, 255, 255, 0.6);
             }
           }
-
-        }
-
-        li {
-          cursor: pointer;
-          display: flex;
-          gap: 10px;
-
-          a {
-            color: $white-color;
+          .sub-btn{
+            color: #71b100;
+            position: absolute;
+            cursor: pointer;
+            top: 20%;
+            right: 0;
+            height: 100%;
+            font-size: 18px;
+            width: 40px;
+            border: none;
+            transition: all 0.3s ease-in;
+            background-color: transparent;
           }
         }
+        .socials{
+          display: flex ;
+          gap: 15px;
+          flex-wrap: nowrap;
 
-        &_FImg {
-          width: 25px;
-          height: 25px;
-        }
-      }
-
-      &_Fserver {
-        font-size: 16px;
-        font-weight: 400;
-        font-style: normal;
-        line-height: normal;
-        margin-top: 10px;
-        display: grid;
-        gap: 15px;
-
-        li {
-          cursor: pointer;
-
-          a {
-            color: $white-color;
+          .footItem{
+            margin: 0;
+            display: block;
+            padding: 20px 0 12px 0;
+            text-align: center;
+            border-radius: 5px;
+            color: #c1c1c1;
+            font-size: 18px;
+            transition: 0.5s;
+            &:hover{
+              color: #71b100;
+              transition: 0.5s;
+            }
           }
         }
       }
-
     }
-
-
-    &_brandIcon {
-      margin-top: 40px;
-    }
-
-    &_links {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-
-      &_ico {
-        width: 26px;
-        height: 25px;
-      }
-    }
-
-
-  }
-
-  &_developer {
-    font-size: 12px;
-    color: $white-color;
-    display: flex;
-    padding-top: 40px;
-    align-items: center;
-    padding-bottom: 30px;
-    justify-content: space-between;
-
-    &_devLog {
-      width: 80px;
-    }
-  }
-
-}
-
-@media (max-width: $breakpoint-sm) {
-  .footer {
-
-    overflow: hidden;
-
-    &_df {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      &_cardFooter {
-        width: 100%;
-        border-bottom: 2px solid $dark-secondary-color;
-        padding-bottom: 5px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        text-align: center;
-
-        &_brand {
-
-          display: flex;
-          //margin: 0 auto;
-        }
-
-        &_FTitle {
-          display: flex;
-          text-align: center;
-        }
-
-        &_link {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          &_homeIcon{
-            width: 20px;
-            height: 20px;
-          }
-        }
-
-      }
-    }
-
-    &_developer {
-      padding: 20px;
-    }
-
-  }
-}
-@media (max-width: $breakpoint-md) {
-  .footer {
-
-    overflow: hidden;
-
-    &_df {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      &_cardFooter {
-        width: 100%;
-        padding: 20px;
-        border-bottom: 2px solid $dark-secondary-color;
-        padding-bottom: 5px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        text-align: center;
-
-        &_brand {
-
-          display: flex;
-          //margin: 0 auto;
-        }
-
-        &_FTitle {
-          display: flex;
-          text-align: center;
-        }
-
-        &_link {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          &_homeIcon{
-            width: 20px;
-            height: 20px;
-          }
-        }
-
-      }
-    }
-
-    &_developer {
-      padding: 20px;
-    }
-
-  }
-}
-@media (max-width: $breakpoint-lg) {
-  .footer {
-
-    overflow: hidden;
-
-    &_df {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      &_cardFooter {
-        width: 80%;
-        padding: 20px;
-        border-bottom: 2px solid $dark-secondary-color;
-        padding-bottom: 5px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        text-align: center;
-
-        &_brand {
-
-          display: flex;
-          //margin: 0 auto;
-        }
-
-        &_FTitle {
-          display: flex;
-          text-align: center;
-        }
-
-        &_link {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          &_homeIcon{
-            width: 20px;
-            height: 20px;
-          }
-        }
-
-      }
-    }
-
-    &_developer {
-      padding: 20px;
-    }
-
-  }
-}
-@media (max-width: $breakpoint-xl) {
-  .footer {
-
-    overflow: hidden;
-
-    &_df {
-      padding: 20px;
-
-
-
-    }
-
-    &_developer {
-      padding: 20px;
-    }
-
   }
 }
