@@ -1,15 +1,114 @@
-.gal-title{
-  position: relative;
-
-  max-width: 800px;
-  margin: 60px auto 50px;
-  text-align: center;
-  .textGal{
-    color: #50575e;
-    font-family: 'Bitter', serif;
-    font-size: 14px;
-    font-style: italic;
+.gallery {
+  .similar-project {
     position: relative;
-    line-height: 1.8em;
+    display: block;
+    padding: 90px 0;
+
+    .rows {
+      display: flex;
+      flex-wrap: wrap;
+     
+      gap: 23px;
+      padding-bottom: 50px;
+    }
+
+    .col-xl-4 {
+      flex: 0 0 auto;
+      width: 32%;
+      position: relative;
+
+      .col-xl-4__single {
+        position: relative;
+        overflow: hidden;
+
+        .col-xl-4__imgs {
+          position: relative;
+          overflow: hidden;
+          border-radius: 10px;
+
+          img {
+            width: 100%;
+            height: 600px;
+          
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.4s ease;
+          }
+
+          // ✅ OVERLAY (background) -- starts above
+          &::before {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(
+              60,
+              53,
+              49,
+              0.8
+            ); // TO‘G‘RILANDI: rgba() noto‘g‘ri yozilgan edi
+            transition: top 0.5s ease;
+            border-radius: 10px;
+            z-index: 1;
+          }
+
+          // ✅ PLUS ICON
+          .col-xl-4__iconGallery {
+            position: absolute;
+            bottom: -60px; // pastdan chiqadi
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            z-index: 2;
+            transition: all 0.5s ease;
+
+            .img-group {
+              height: 77px;
+              width: 77px;
+              background-color: #a47c68;
+              color: white;
+              display: flex;
+              -webkit-box-align: center;
+              font-size: 22px;
+              border: none;
+              border-top-left-radius: 20px;
+              border-bottom-left-radius: 20px;
+              border-bottom-right-radius: 20px;
+              padding: 14px 16px;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              transition: all 700ms ease;
+              opacity: 1;
+              &:hover {
+                transform: translateY(0px);
+                background-color: #ffffff;
+                color: #3c3531;
+              }
+            }
+          }
+
+          // ✅ HOVER EFFEKT
+          &:hover {
+            img {
+              transform: scale(1.05);
+            }
+
+            &::before {
+              top: 0; // overlay pastga tushadi
+            }
+
+            .col-xl-4__iconGallery {
+              bottom: 40%; // icon yuqoriga chiqadi
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
   }
 }

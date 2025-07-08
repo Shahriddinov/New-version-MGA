@@ -3,9 +3,12 @@ import LoadingPage from "./components/Loading/LoadingPage";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import ScrollTop from "./hoc/ScrollTop";
 import Layout from "./components/Layout/Layout";
+import { ToastContainer } from "react-toastify";
+import CatalogBook from "./pages/CatalogBook";
 
 const Home = lazy(() => import("./pages/Home/home"));
 const About = lazy(() => import("./pages/About/about"));
+const catalogBook = lazy(() => import("./pages/CatalogBook"));
 const Serves = lazy(() => import("./pages/Serves"));
 const Gallery = lazy(() => import("./pages/Gallery/gallery"));
 const Contact = lazy(() => import("./pages/Contact/contact"));
@@ -13,10 +16,13 @@ const Contact = lazy(() => import("./pages/Contact/contact"));
 
 const routes = [
     {path: "/", element: Home},
+    {path: "/catalogBook", element: CatalogBook},
+
     {path: "/about", element: About},
     {path: "/serves", element: Serves},
     {path: "/gallery", element: Gallery},
     {path: "/contact", element: Contact},
+
 
 ];
 const RoutesContainer = () => (

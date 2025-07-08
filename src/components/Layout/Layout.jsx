@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Header from "./Header/header";
 import { FaAngleUp } from "react-icons/fa";
 import Footer from "./Footer/footer";
+import CustomCursor from "../customCurson/custonCurson";
 
 const Layout = (props) => {
   const { children } = props;
@@ -10,20 +11,18 @@ const Layout = (props) => {
   const { pathname } = useLocation();
   const [text, setText] = useState("");
   const [speaker, setSpeaker] = useState(false);
+  const [showTopBtn, setShowTopBtn] = useState(false);
 
   const changeSpeakSwitcher = (value) => {
     setSpeaker(value);
   };
-  const [showTopBtn, setShowTopBtn] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        setShowTopBtn(true);
-      } else {
-        setShowTopBtn(false);
-      }
+      setShowTopBtn(window.scrollY > 100);
     });
   }, []);
+
   const goToTop = () => {
     window.scrollTo({
       top: 0,
@@ -33,27 +32,31 @@ const Layout = (props) => {
 
   useEffect(() => {
     document.onmouseup = () => {
-      if (speaker && text !== window.getSelection().toString()) {
-        window.responsiveVoice.speak(
-          window.getSelection().toString(),
-          "Russian Female"
-        );
-        setText(window.getSelection().toString());
+      const selectedText = window.getSelection().toString();
+      if (speaker && text !== selectedText) {
+        window.responsiveVoice.speak(selectedText, "Russian Female");
+        setText(selectedText);
       }
     };
   }, [speaker]);
 
+  // Bu yerda /catalogBook sahifasini tekshiramiz
+  const isCatalogBookPage = pathname === "/catalogBook";
+
   return (
-    <div className={pathname === "/" ? "page-wrapper" : "page-wrapper"}>
+    <div className="page-wrapper">
       <>
-        <Header speaker={speaker} changeSpeakSwitcher={changeSpeakSwitcher} />
-        <div className="page-content">{children}</div>{" "}
+        <CustomCursor />
+        {!isCatalogBookPage && (
+          <Header speaker={speaker} changeSpeakSwitcher={changeSpeakSwitcher} />
+        )}
+        <div className="page-content">{children}</div>
         {showTopBtn && (
-          <button className="scrollToHome " onClick={goToTop}>
+          <button className="scroll-to-top" onClick={goToTop}>
             <FaAngleUp />
           </button>
-        )}{" "}
-        <Footer />
+        )}
+        {!isCatalogBookPage && <Footer />}
       </>
     </div>
   );

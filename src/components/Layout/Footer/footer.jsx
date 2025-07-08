@@ -1,99 +1,160 @@
-import React, {useEffect} from "react";
-import logo from "../../../assests/images/2.png"
-import {MdOutlineEmail} from "react-icons/md";
-import {GrSend} from "react-icons/gr";
-import {FaPhoneVolume, FaFacebookF, FaYoutube, FaInstagram, FaTelegram, FaBars} from "react-icons/fa6";
+import React, { useEffect } from "react";
+import logo from "../../../assests/images/white-logo.jpg";
+import { MdOutlineEmail } from "react-icons/md";
+import { GrMapLocation } from "react-icons/gr";
+
+import { GrSend } from "react-icons/gr";
+import {
+
+  FaFacebookF,
+  FaYoutube,
+  FaInstagram,
+  FaTelegram,
+  
+  FaPhoneVolume
+} from "react-icons/fa6";
+import { MdOutlineNavigateNext } from "react-icons/md";
+
 
 const Footer = () => {
-    return <div className="footer">
-        <div className="top-footer">
-            <div className="auto-container">
-                <div className="row">
-                    <div className="col-3">
-                        <div className="widget">
-                            <a href="/">
-                                <img className="footLog" src={logo} alt="Footer Logo"/>
-                            </a>
-                        </div>
-                        <div className="textWidget">
-                            © Copyrights 2025 Mga Reklama <br/>
-                            All rights reserved.
-                        </div>
-                    </div>
-                    <div className="col-3">
-                        <div className="widget-title">Userful Links</div>
-                        <div className="menuFooter">
-                            <ul className="two-footer">
-                                <li className="two-item">
-                                    <a className="two-item" href="/">Home</a>
-                                </li>
-                                <li className="two-item">
-                                    <a className="two-item" href="/about">About</a>
-                                </li>
-                                <li className="two-item">
-                                    <a className="two-item" href="/serves">Serves</a>
-                                </li>
-                                <li className="two-item">
-                                    <a className="two-item" href="/gallery">Gallery</a>
-                                </li>
-                                <li className="two-item">
-                                    <a className="two-item" href="/contact">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="col-3">
-                        <div className="widget-title">LEGAL</div>
-                        <div className="menuFooter">
-                            <ul className="two-footer">
-                                <li className="two-item">
-                                    <a className="two-item" href="#">Terms & Conditions</a>
-                                </li>
-                                <li className="two-item">
-                                    <a className="two-item" href="#">Privacy Policy</a>
-                                </li>
-                                <li className="two-item">
-                                    <a className="two-item" href="#">Terms of Sales</a>
-                                </li>
-                                <li className="two-item">
-                                    <a className="two-item" href="#">Whitepaper</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="col-3">
-                        <div className="widget-title">SUBSCRIBE</div>
-                        <div className="menuFooter">
-                            <div className="two-footer">
-                                <div className="subscribe-area">
-                                    <div className="form-group">
-                                        <input type="email" name="Email" className="form-control" placeholder="Email"/>
-                                        <MdOutlineEmail className="emailIcon"/>
-                                        <button type="submit" className="sub-btn"><GrSend /></button>
-                                    </div>
-                                </div>
-                                <ul className="socials">
-                                    <li className="footItem">
-                                        <a className="footItem" href="#"><FaFacebookF/></a>
-                                    </li>
-                                    <li className="footItem">
-                                        <a className="footItem" href="#"><FaYoutube/></a>
-                                    </li>
-                                    <li className="footItem">
-                                        <a className="footItem" href="#"><FaInstagram/></a>
-                                    </li>
-                                    <li className="footItem">
-                                        <a className="footItem" href="#"><FaTelegram/></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+  return (
+    <footer className="site-footer">
+      <div className="site-footer-bg"></div>
+      <div className="site-footer__top">
+        <div className="container">
+          <div className="rows">
+            <div className="site-footer__top_col3 fadeInUp animated">
+              <div className="footer-widget">
+                <div className="footer-widget__logo">
+                  <a href="/">
+                    <img src={logo} alt="logo" />
+                  </a>
+                </div>
+                <div className="footer-wigdet_text-box">
+                  <p className="footer-widget_text-box_des">
+                    Outdoor Factory, founded in 2010, is a design and build
+                    company specializing in making dreams come true.
+                  </p>
+                </div>
+                <div className="footer-widget__social">
+                    <a href="/" className="fa-you">
+                    < FaYoutube/>
+                    </a>
+                    <a href="/" className="fa-you">
+                    < FaFacebookF/>
+                    </a>
+                    <a href="/" className="fa-you">
+                    <FaInstagram/>
+                    </a>
+                    <a href="/" className="fa-you">
+                    <FaTelegram/>
+                    </a>
+                </div>
+              </div>
+            </div>
+            <div className="site-footer__top_col3 fadeInUp animated">
+                <div className="footer-widget">
+                    <div className="footer-widget_explore clearfix">
+                        <h3 className="footer-widget_explore__exTitle">
+                            Quick Menu
+                        </h3>
+                        <ul className="footer-widget_explore-list clearfix">
+                            <li>
+                                <a href="/about" className="lists"> <MdOutlineNavigateNext/> About Us</a>
+                            </li>
+                            <li>
+                                <a href="/about" className="lists"> <MdOutlineNavigateNext/> Services</a>
+                            </li>
+                            <li>
+                                <a href="/about" className="lists"> <MdOutlineNavigateNext/> Gallery</a>
+                            </li>
+                            <li>
+                                <a href="/about" className="lists"> <MdOutlineNavigateNext/> About Us</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <div className="site-footer__top_col3 fadeInUp animated">
+                <div className="footer-widget">
+                    <div className="footer-widget_explore clearfix">
+                        <h3 className="footer-widget_explore__exTitle">
+                            Our Work
+                        </h3>
+                        <ul className="footer-widget_explore-list clearfix">
+                            <li>
+                                <a href="/about" className="lists"> <MdOutlineNavigateNext/> Theme Parks</a>
+                            </li>
+                            <li>
+                                <a href="/about" className="lists"> <MdOutlineNavigateNext/>Museums</a>
+                            </li>
+                            <li>
+                                <a href="/about" className="lists"> <MdOutlineNavigateNext/>City Architecture</a>
+                            </li>
+                            <li>
+                                <a href="/about" className="lists"> <MdOutlineNavigateNext/>Digital Experience</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div className="site-footer__top_col3 fadeInUp animated">
+                <div className="footer-widget">
+                    <div className="footer-widget_explore clearfix">
+                        <h3 className="footer-widget_explore__exTitle">
+                            Our Work
+                        </h3>
+                        <ul className="footer-widget_explore-list clearfix">
+                            <li className="foot-icon">
+                               <div className="call-icon">
+                                <FaPhoneVolume className="phone-call"/>
+                               </div>
+                               <div className="call-text">
+                                <h5 className="call-text-h5">Call anytime</h5>
+                                <p className="call-text-pp">
+                                  <a className="call-text-aa" href="tel:+99801234567">+998901234567</a>
+                                </p>
+                               </div>
+                            </li>
+                           <li className="foot-icon">
+                               <div className="call-icon">
+                                <MdOutlineEmail className="phone-call"/>
+                               </div>
+                               <div className="call-text">
+                                <h5 className="call-text-h5">Send email</h5>
+                                <p className="call-text-pp">
+                                  <a className="call-text-aa" href="mailto:info@outdoorfactory.com">info@outdoor.com</a>
+                                </p>
+                               </div>
+                            </li>
+                           <li className="foot-icon">
+                               <div className="call-icon">
+                                <GrMapLocation className="phone-call"/>
+                               </div>
+                               <div className="call-text">
+                                <h5 className="call-text-h5">Uniq Office, Ayazağa Cad</h5>
+                                <p className="call-text-pp">
+                                  <a className="call-text-aa" href="mailto:info@outdoorfactory.com">Sariyer, ISTANBUL</a>
+                                </p>
+                               </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          </div>
         </div>
-    </div>;
+      </div>
+      <div className="site-footer__bottom">
+        <div className="container">
+          <div className="site-footer__bottom_binner">
+            <div className="bText">© 2025 Mga Reklama </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

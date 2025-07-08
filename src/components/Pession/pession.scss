@@ -1,0 +1,96 @@
+.pession {
+  margin-top: 50px;
+
+  &_rows {
+    display: flex;
+    justify-content: space-between;
+
+    &_lefts {
+      width: 50%;
+      display: flex;
+      .col-2 {
+        flex: 0 0 16.666667%;
+        width: 33%;
+
+        .m {
+          background-image: url("../../assests//images//m.png");
+          position: relative;
+          background-position: center center;
+
+          background-attachment: scroll;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 75%;
+          width: 250px;
+          height: 270px;
+          // margin-top: 100px;
+        }
+        .g {
+          background-image: url("../../assests//images/g.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 75%;
+          width: 250px;
+          height: 270px;
+
+          margin-top: 200px;
+        }
+        .a {
+          background-image: url("../../assests//images/a.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 75%;
+          width: 250px;
+          height: 270px;
+        }
+      }
+    }
+    &_rights {
+      width: 50%;
+      .aboutCompany {
+        padding: 60px 20px;
+        display: flex;
+        justify-content: center;
+        &__content {
+          max-width: 700px;
+          text-align: left;
+        }
+
+        &__title {
+          font-size: 2rem;
+          font-weight: 900;
+          line-height: 1.4;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+          color: #fff;
+
+          .highlight {
+            color: #abd046;
+          }
+        }
+
+        &__text {
+          font-size: 18px;
+          line-height: 1.7;
+          color: #a47c68;
+          margin-bottom: 25px;
+        }
+
+        &__btn {
+          padding: 10px 20px;
+          background-color: #abd046;
+          color: white;
+          font-weight: 700;
+          border: none;
+          font-size: 14px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: #94b93e;
+          }
+        }
+      }
+    }
+  }
+}

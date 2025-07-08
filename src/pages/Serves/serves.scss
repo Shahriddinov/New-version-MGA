@@ -1,54 +1,76 @@
-.rows{
-  display: flex;
- flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 50px;
-  .col-md-4{
-    width: 33%;
-    margin-bottom: 20px;
+.section-serves {
+  .servies {
+    position: relative;
+    display: block;
+    padding: 120px 0 90px;
+    .row_one {
+      display: flex;
+      gap: 20px;
+      align-items: center;
 
-    .services-item{
-      transition: all 500ms;
-      position: relative;
-      margin-bottom: 30px;
-      .single-img{
-        overflow: hidden;
-        .singleOne{
-          transition: all 500ms;
-        }
-      }
-      &:hover {
-        .single-img {
-          .singleOne {
-            transform: scale(1.2);
+      .col-lg-4 {
+        width: 33.33333333%;
+        flex: 0 0 auto;
+
+        &_one-single {
+          position: relative;
+          display: block;
+          margin-bottom: 30px;
+          z-index: 5;
+
+          &_img {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            z-index: 1;
+
+            &::before,
+            &::after {
+              position: absolute;
+              content: "";
+              background-color: #3c3531;
+              height: 0%;
+              left: 0;
+              right: 0;
+              opacity: 0.8;
+              z-index: 1;
+              transition: all 500ms ease;
+            }
+
+            &::before {
+              top: 0;
+            }
+
+            &::after {
+              bottom: 0;
+            }
           }
-        }
-      }
-      .services-content{
-        padding: 30px 15px 18px 30px;
-        background-color: #fff;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        .singleIcon{
-          font-size: 45px;
-          line-height: 1;
-          margin-bottom: 20px;
-          max-width: 50px;
-        }
-        .cont-single{
-          .single-title{
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 28px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            transition: all 500ms;
-            color: #71b100;
+
+          // ✅ To‘g‘rilangan hover
+          &:hover {
+            .col-lg-4_one-single_img::before {
+              height: 50%;
+            }
+            .col-lg-4_one-single_img::after {
+              height: 50%;
+            }
           }
-          .single-des{
-            transition: all 500ms;
-            max-width: 225px;
+          &_contents {
+            position: relative;
+            display: block;
+            margin-top: -10px;
+            border: 1px solid #878686;
+            padding: 32px 39px 30px;
+            transition: all 500ms ease;
+            &__titles {
+              font-size: 24px;
+              font-weight: 700;
+              line-height: 34px;
+              color: #ffffff;
+              margin-bottom: 2px;
+            }
+            &__texts {
+            }
           }
         }
       }

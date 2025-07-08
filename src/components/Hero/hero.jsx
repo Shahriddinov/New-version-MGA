@@ -1,62 +1,74 @@
-import React from 'react';
+import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./hero.scss"
-import { Autoplay, Navigation, EffectFade } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/effect-fade";
-import hero1 from "../../assests/images/IMG.png"
-import hero2 from "../../assests/images/IMG_2.png"
-import hero3 from "../../assests/images/IMG_3.jpg"
+import "./hero.scss";
+import heroVideo from "../../assests/images/heroVideo.mp4";
 const Hero = () => {
-    const slides = [
-        {
-            id: 1,
-            title: "Tabiatning go'zalligi",
-            description: "Har bir manzara go'zallikni o'zida aks ettiradi.",
-            image: hero1,
-        },
-        {
-            id: 2,
-            title: "Shahar hayoti",
-            description: "Hayotning ritmi shahar ko'chalari bilan uyg'unlashadi.",
-            image: hero2,
-        },
-        {
-            id: 3,
-            title: "Tog'lar va sarguzashtlar",
-            description: "Sarguzashtlar tog'lar bilan boshlanadi!",
-            image: hero3,
-        },
-    ];
-    return (
-        <div className="hero">
-            <div className="carouselContainer">
-                <Swiper
-                    modules={[Autoplay, Navigation, EffectFade]}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
-                    effect="fade"
-                    navigation
-                    loop
-                    className="swiperItem"
-                >
-                    <div>
-                        {slides.map((slide) => (
-                            <SwiperSlide key={slide.id} >
-                                <div className="slide">
-                                    <img src={slide.image} alt={slide.title} style={{ width: "100vw", height: "100vh", objectFit: "cover", display:"block" }} />
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </div>
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const swiperRef = useRef(null); // Swiper instansiyani olish uchun
 
-                </Swiper>
+  const slides = [{ id: 1, image: heroVideo }];
+
+  useEffect(() => {
+    if (
+      swiperRef.current &&
+      swiperRef.current.params &&
+      swiperRef.current.params.navigation
+    ) {
+      swiperRef.current.params.navigation.prevEl = prevRef.current;
+      swiperRef.current.params.navigation.nextEl = nextRef.current;
+      swiperRef.current.navigation.init();
+      swiperRef.current.navigation.update();
+    }
+  }, []);
+
+  return (
+    <div className="hero">
+      <div className="sliderWrapper">
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          loop={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper; // Swiper instance saqlab qo‘yiladi
+          }}
+          className="mySwiper"
+        >
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.id} className="slide">
+              <div className="container">
+                <video
+                  src={slide.image}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="bag"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <div className="container" style={{ position: "relative" }}>
+          <div className="navButtons">
+            <div ref={prevRef} className="custom-prev">
+              ←
             </div>
+            <div ref={nextRef} className="custom-next">
+              →
+            </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Hero;

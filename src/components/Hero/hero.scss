@@ -2,71 +2,91 @@
 
 .hero {
   width: 100vw;
-  height: 100vh;
+  height: 85vh;
   position: relative;
-  z-index: 1;
-  border: 1px solid white;
+  top: -36px;
+  margin-bottom: -35px;
+  z-index: 91;
 
-  .carouselContainer {
+  .sliderWrapper {
     width: 100%;
-    height: 100%;
-    z-index: 1;
+    height: 83.5vh;
+    background: linear-gradient(to right, #fff 50%, #b2d235 50%);
+    position: relative;
 
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: white; // tugma rangi
-      width: 50px;
-      height: 50px;
-      background: rgba(0, 0, 0, 0.5); // orqa fon shaffof
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: background 0.3s;
-
-      &:hover {
-        background: rgba(0, 0, 0, 0.8);
-      }
-
-      &::after {
-        font-size: 20px; // default icon o‘lchami
-      }
-    }
-
-    .swiperItem {
-      width: 100vw !important;
+    .mySwiper {
+      height: 100%;
+      width: 100%;
     }
 
     .slide {
-      width: 100%;
-      height: 100vh; // yoki kerakli o‘lcham
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      z-index: 1;
-      //.overlay {
-      //  position: absolute;
-      //  top: 0;
-      //  left: 0;
-      //  width: 100%;
-      //  height: 100%;
-      //  background: rgba(0, 0, 0, 0.4); // mat shaffof fon
-      //  display: flex;
-      //  flex-direction: column;
-      //  justify-content: center;
-      //  align-items: center;
-      //  color: #fff;
-      //  z-index: 1;
-      //
-      //  h2 {
-      //    font-size: 2rem;
-      //    margin: 0;
-      //  }
-      //
-      //  p {
-      //    font-size: 1rem;
-      //  }
-      //}
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      .bag {
+        width: 100%;
+        height: 65vh;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .navButtons {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+
+      .custom-prev,
+      .custom-next {
+        width: 40px;
+        height: 40px;
+        background-color: #b2d235;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 20px;
+
+        &:hover {
+          background-color: #9cbf30;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 700px;
+
+    .carouselContainer {
+      .slide {
+        height: 700px;
+
+        .slide-text {
+          h2 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+
+    .custom-next,
+    .custom-prev {
+      width: 40px;
+      height: 100px;
     }
   }
 }
@@ -75,49 +95,26 @@
   .hero {
     height: 500px;
 
-
-    .slide {
-      height: 500px;
-    }
-
-    .swiper-wrapper {
-      height: 500px;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      width: 40px!important;
-      height: 40px!important;
-      &::after {
-        font-size: 18px!important; // default icon o‘lchami
+    .carouselContainer {
+      .slide {
+        height: 500px;
       }
 
+      .slide-text {
+        h2 {
+          font-size: 1.8rem;
+        }
 
-    }
-  }
-}
-@media (max-width: 768px){
-  .hero {
-    height: 800px;
-
-
-    .slide {
-      height: 800px;
-    }
-
-    .swiper-wrapper {
-      height: 800px;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      width: 40px!important;
-      height: 40px!important;
-      &::after {
-        font-size: 18px!important; // default icon o‘lchami
+        p {
+          font-size: 1rem;
+        }
       }
+    }
 
-
+    .custom-next,
+    .custom-prev {
+      width: 30px;
+      height: 80px;
     }
   }
 }

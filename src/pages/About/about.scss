@@ -1,94 +1,180 @@
-.about-section{
+.about-two {
   position: relative;
-  background: #ffffff;
-  padding: 70px 0 30px;
-  .about-titles{
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto 50px;
-    text-align: center;
-    .tit{
+  display: block;
+  padding: 120px 0 127px;
+  &_col-5 {
+    width: 43%;
+    &_left {
       position: relative;
-      font-size: 32px;
-      font-weight: 700;
-      color: #253d4a;
-      line-height: 1.4em;
-
-      text-transform: uppercase;
-      margin-bottom: 30px;
-      .strongs{
-        color: #71b100;
-      }
-    }
-    .subDes{
-      color: #50575e;
-      font-family: 'Bitter', serif;
-      font-size: 14px;
-      font-style: italic;
-    }
-  }
-  .full-image{
-    max-width: 100%;
-    position: relative;
-    margin-bottom: 50px;
-    outline: 4px solid #ffffff;
-    outline-offset: -15px;
-  }
-  .services-outer{
-    position: relative;
-    .row{
-      display: flex;
-      .col-4{
-        width: 33.3%;
-        .inner-about{
+      display: block;
+      margin-right: -26px;
+      .section-title {
+        margin-bottom: 48px;
+        position: relative;
+        display: block;
+        margin-top: -9px;
+        &__tagline {
           position: relative;
-          padding-left: 60px;
-          .icon-left{
+          display: inline-block;
+          color: #a47c68;
+          font-size: 16px;
+          text-transform: uppercase;
+          letter-spacing: 0.2em;
+        }
+        &___title {
+          color: #ffffff;
+          margin: 0;
+          font-size: 40px;
+          line-height: 48px;
+          font-weight: 700;
+          margin-top: 1px;
+        }
+        &_line {
+          left: 0;
+          position: absolute;
+          bottom: -11px;
+          transform: translateX(0);
+          &::before {
             position: absolute;
+            bottom: 0;
             left: 0;
-            top: 0;
-            padding-top: 4px;
-            width: 36px;
-            text-align: center;
-            .checkIcon{
+            height: 2px;
+            width: 40px;
+            content: "";
+            background-color: #a47c68;
+          }
+          &::after {
+            position: absolute;
+            bottom: 0;
+            left: 45px;
+            height: 2px;
+            width: 4px;
+            content: "";
+            background-color: #3c3531;
+          }
+        }
+      }
+      &_points {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+
+        &_boxLeft {
+          position: relative;
+          display: block;
+          float: left;
+          .pointsUl {
+            position: relative;
+            display: block;
+            margin-bottom: 19px;
+            &_liPoint {
               position: relative;
-              display: block;
-              width: 36px;
-              height: 36px;
-              background: #71b100;
-              line-height: 36px;
-              font-size: 18px;
-              color: #ffffff;
-              margin-bottom: 20px;
-            }
-            .numbers{
-              position: relative;
-              color: #e1e1e1;
-              font-size: 48px;
-              font-weight: 700;
-              display: none;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              -webkit-box-align: center;
+              &_iconPo {
+                position: relative;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                .check {
+                  position: relative;
+                  display: flex;
+                  -webkit-box-align: center;
+                  align-items: center;
+                  font-size: 26px;
+                  color: #a47c68;
+                }
+              }
+              &_textPo {
+                margin-left: 10px;
+                &_Pop {
+                  color: #ffffff;
+                  font-size: 18px;
+                  font-weight: 700;
+                }
+              }
             }
           }
-          .contents-about{
-            .sup{
-              color: #253d4a;
-              font-size: 14px;
-              font-weight: 700;
-              text-transform: uppercase;
-              margin-bottom: 8px;
-            }
-            .about-des{
+          .tests-point {
+          }
+        }
+        &_boxRight {
+          position: relative;
+          display: block;
+          float: right;
+          .pointsUl {
+            position: relative;
+            display: block;
+            margin-bottom: 19px;
+            &_liPoint {
               position: relative;
-              line-height: 1.8em;
-              padding-right: 10px;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              -webkit-box-align: center;
+              &_iconPo {
+                position: relative;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                .check {
+                  position: relative;
+                  display: flex;
+                  -webkit-box-align: center;
+                  align-items: center;
+                  font-size: 26px;
+                  color: #a47c68;
+                }
+              }
+              &_textPo {
+                margin-left: 10px;
+                &_Pop {
+                  color: #ffffff;
+                  font-size: 18px;
+                  font-weight: 700;
+                }
+              }
             }
           }
         }
       }
-      .column{
+    }
+  }
+  &_col-7 {
+    width: 57%;
+    flex: 0 0 auto;
+    &_right {
+      position: relative;
+      display: block;
+      margin-left: 240px;
+      .img-box {
         position: relative;
-        margin-bottom: 30px;
+        display: block;
+        .img-1 {
+          position: relative;
+          display: block;
+          border-top-right-radius: 80px;
+          border-bottom-left-radius: 80px;
+          border-bottom-right-radius: 80px;
+        }
+        .img-2 {
+          position: absolute;
+          top: 75px;
+          left: -185px;
+          border-top-left-radius: 80px;
+          border-top-right-radius: 80px;
+          border-bottom-left-radius: 80px;
+        }
       }
     }
+  }
+  &__text-1 {
+    font-size: 24px;
+    color: #a47c68;
+    font-weight: 500;
+    line-height: 36px;
   }
 }

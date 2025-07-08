@@ -1,0 +1,40 @@
+@import "../../assests/style/global";
+.custom-cursor {
+  &__cursor {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid $ambed-base;
+    transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 5px), -50%);
+    z-index: 999991;
+  }
+
+  &__cursor-two {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: $ambed-base;
+    opacity: .3;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width .3s, height .3s, opacity .3s;
+    z-index: 999991;
+  }
+
+  &__hover {
+    background-color: $ambed-base;
+    opacity: 0.4;
+  }
+
+  &__innerhover {
+    width: 25px;
+    height: 25px;
+    opacity: .4;
+  }
+}
