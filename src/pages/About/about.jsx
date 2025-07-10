@@ -1,10 +1,6 @@
 import React from "react";
 import "./about.scss";
-import aboutimg from "../../assests/images/about-one-img-1.png";
-import aboutimg2 from "../../assests/images/about-two-img-2.png";
-import map from "../../assests/images/maps.png";
 import PageHero from "../../components/pageHero";
-import { FiCheckCircle } from "react-icons/fi";
 import Partner from "../../components/Partner";
 import NewLetter from "../../components/newLetter";
 import Pession from "../../components/Pession";

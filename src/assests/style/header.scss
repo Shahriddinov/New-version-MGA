@@ -10,7 +10,7 @@
   &_top {
     position: relative;
     display: block;
-    background-color: #F0E3CC;
+    background-color: #f0e3cc;
     padding-bottom: 35px;
     margin-bottom: -35px;
 
@@ -43,7 +43,9 @@
         position: relative;
         display: block;
         float: left;
-
+        .logoItem {
+          width: 100px;
+        }
       }
 
       &_right {
@@ -61,7 +63,6 @@
             position: relative;
             display: block;
 
-            
             &_topBox {
               position: relative;
               display: flex;
@@ -103,7 +104,7 @@
                     font-size: 12px;
                     font-weight: 600;
                     line-height: 12px;
-                    color: #C7BBB3;
+                    color: #c7bbb3;
                   }
 
                   .h5 {
@@ -114,8 +115,6 @@
                   }
                 }
               }
-
-
             }
           }
 
@@ -142,7 +141,6 @@
               border-radius: 50%;
               overflow: hidden;
 
-
               &::after {
                 position: absolute;
                 content: "";
@@ -151,12 +149,12 @@
                 right: 0;
                 height: 100%;
                 background-color: #d25717;
-                -webkit-transition-delay: .1s;
-                transition-delay: .1s;
+                -webkit-transition-delay: 0.1s;
+                transition-delay: 0.1s;
                 -webkit-transition-timing-function: ease-in-out;
                 transition-timing-function: ease-in-out;
-                -webkit-transition-duration: .4s;
-                transition-duration: .4s;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
                 -webkit-transition-property: all;
                 transition-property: all;
                 opacity: 1;
@@ -174,14 +172,11 @@
                 color: #ffffff;
                 transform: scaleY(1);
               }
-
-
             }
           }
         }
       }
     }
-
   }
 
   .main-menu {
@@ -245,7 +240,6 @@
                   }
                 }
               }
-
             }
           }
         }
@@ -375,4 +369,52 @@
   width: 100%;
   transition: width 0.5s ease;
   margin: 0 auto;
+}
+.burger {
+  display: none;
+}
+@media (max-width: 1190px) {
+  .main_header_top_inner_right_content_address_topBox {
+    display: none;
+  }
+  .burger {
+    display: flex;
+    margin-top: 25px;
+    font-size: 23px;
+    border: none;
+    color: #a47c68;
+    background: transparent;
+  }
+ 
+  
+  .main-menu_wrapper_inners_left_boxMenu_list {
+    display: none !important;
+  }
+  
+}
+@media (max-width: 768px) {
+  .main_header_top_inner_right {
+    display: none;
+  }
+  .main-menu_wrapper_inners_right_btn_btnBox{
+    display: none;
+  }
+  .burger {
+    display: flex;
+    margin-top: 10px;
+    font-size: 23px;
+  }
+  .main_header .main-menu_wrapper_inners{
+    padding: 15px;
+  }
+  .main_header_top_inner_logo {
+    position: relative;
+    float: none;
+    .logoItem {
+      width: 120px;
+      height: 50px;
+      margin: 0 auto;
+      display: flex;
+    }
+  }
 }

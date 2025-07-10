@@ -6,7 +6,8 @@ function CatalogBook() {
     <div className="fliphtml5-wrapper">
       <iframe
         title="Mga Reklama"
-        src="https://online.fliphtml5.com/lqiyb/akhq/"
+        src="https://online.flippingbook.com/view/1358947/
+        "
         width="100%"
         height="100%"
         allowFullScreen

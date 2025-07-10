@@ -164,7 +164,7 @@ const Contact = () => {
           src="https://yandex.uz/map-widget/v1/?ll=69.322203%2C41.303646&mode=whatshere&whatshere%5Bpoint%5D=69.321825%2C41.303496&whatshere%5Bzoom%5D=16&z=17.2"
           width="100%"
           height="100%"
-          frameBorder="1"
+         
           allowFullScreen="true"
           style={{ position: "relative" }}
         ></iframe>

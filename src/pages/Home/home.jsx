@@ -1,10 +1,7 @@
-import React, {useEffect} from "react";
+import React from "react";
 import "./home.scss";
 import Hero from "../../components/Hero/hero";
 import Partner from "../../components/Partner";
-import Pession from "../../components/Pession";
-import Projects from "../../components/HomeServies";
-import ProductImage from "../../components/ProjectImage";
 import NewLetter from "../../components/newLetter";
 import AboutCompany from "../../components/Pession";
 import HomeServices from "../../components/HomeServies";

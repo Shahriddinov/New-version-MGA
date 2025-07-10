@@ -112,18 +112,18 @@ const Footer = () => {
                                <div className="call-text">
                                 <h5 className="call-text-h5">Call anytime</h5>
                                 <p className="call-text-pp">
-                                  <a className="call-text-aa" href="tel:+99801234567">+998901234567</a>
+                                  <a className="call-text-aa" href="tel:+998770124004">+998 77 012 40 04</a>
                                 </p>
                                </div>
                             </li>
-                           <li className="foot-icon">
+                           <li className="foot-icon"> 
                                <div className="call-icon">
                                 <MdOutlineEmail className="phone-call"/>
                                </div>
                                <div className="call-text">
                                 <h5 className="call-text-h5">Send email</h5>
                                 <p className="call-text-pp">
-                                  <a className="call-text-aa" href="mailto:info@outdoorfactory.com">info@outdoor.com</a>
+                                  <a className="call-text-aa" href="mailto:info@mgareklama.com">info@mgareklama.com</a>
                                 </p>
                                </div>
                             </li>
