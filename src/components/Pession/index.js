@@ -2,7 +2,11 @@ import React, { useEffect } from "react";
 import "./pession.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
+
 export default function Pession() {
+    const { t } = useTranslation();
+  
   useEffect(() => {
     AOS.init({
       duration: 1000, // animatsiya davomiyligi (ms)
@@ -49,10 +53,7 @@ export default function Pession() {
                   ALIRIZ!
                 </h2>
                 <p className="aboutCompany__text">
-                  Taze Baskı Merkezi olarak, 2010 yılında kurumsal bütünlüğünü
-                  tamamlayarak, deneyimli yönetim kadrosu, genişleyen müşteri
-                  portföyü ve hizmet altyapısı ile sektöründe öncü ve yenilikçi
-                  anlayışa sahip bir kuruluş haline geldik.
+                  {t("desAbout")}
                 </p>
                 <button className="aboutCompany__btn">TÜMÜNÜ OKU</button>
               </div>

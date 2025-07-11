@@ -1,8 +1,8 @@
 import React, {lazy, Suspense} from "react";
-import LoadingPage from "./components/Loading/LoadingPage";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import ScrollTop from "./hoc/ScrollTop";
 import Layout from "./components/Layout/Layout";
+import Spinner from "./components/Spinner";
 
 const Home = lazy(() => import("./pages/Home/home"));
 const About = lazy(() => import("./pages/About/about"));
@@ -26,7 +26,7 @@ const routes = [
 const RoutesContainer = () => (
     <Router>
         <Layout>
-            <Suspense fallback={<LoadingPage position="full"/>}>
+            <Suspense fallback={<Spinner position="full"/>}>
 
                 <Routes>
                     {routes.map((route, key) => {

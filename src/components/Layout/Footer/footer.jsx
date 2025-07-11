@@ -206,14 +206,14 @@ const Footer = () => {
                       </div>
                       <div className="call-text">
                         <h5 className="call-text-h5">
-                          Uniq Office, Ayazağa Cad
+                          Uzbekistan
                         </h5>
                         <p className="call-text-pp">
                           <a
                             className="call-text-aa"
                             href="mailto:info@outdoorfactory.com"
                           >
-                            Sariyer, ISTANBUL
+                            Toshkent shahar 61 k
                           </a>
                         </p>
                       </div>
