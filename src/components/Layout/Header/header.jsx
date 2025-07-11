@@ -87,7 +87,8 @@ const Header = () => {
                       href="https://www.facebook.com/mgareklama/"
                       target="_blank"
                       className="social-icon"
-                      target="_blank"
+                      
+                      rel="noreferrer"
                     >
                       <FaFacebookSquare />
                     </a>
@@ -95,7 +96,8 @@ const Header = () => {
                       href="https://www.instagram.com/mgareklama/"
                       target="_blank"
                       className="social-icon"
-                      target="_blank"
+                      
+                      rel="noreferrer"
                     >
                       <FaInstagram />
                     </a>
@@ -106,7 +108,8 @@ const Header = () => {
                       href="https://www.youtube.com/@mgareklama"
                       target="_blank"
                       className="social-icon"
-                      target="_blank"
+                     
+                      rel="noreferrer"
                     >
                       <FaYoutube />
                     </a>

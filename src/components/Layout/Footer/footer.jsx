@@ -52,6 +52,7 @@ const Footer = () => {
                   <a
                     href="https://www.youtube.com/@mgareklama"
                     target="_blank"
+                    rel="noreferrer"
                     className="fa-you"
                   >
                     <FaYoutube />
@@ -59,6 +60,7 @@ const Footer = () => {
                   <a
                     href="https://www.facebook.com/mgareklama/"
                     target="_blank"
+                    rel="noreferrer"
                     className="fa-you"
                   >
                     <FaFacebookF />
@@ -66,6 +68,7 @@ const Footer = () => {
                   <a
                     href="https://www.instagram.com/mgareklama/"
                     target="_blank"
+                    rel="noreferrer"
                     className="fa-you"
                   >
                     <FaInstagram />

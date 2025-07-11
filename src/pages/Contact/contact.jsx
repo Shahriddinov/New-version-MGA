@@ -3,7 +3,6 @@ import "./contact.scss";
 import PageHero from "../../components/pageHero";
 import contactImg from "../../assests/images/contact-page-shape-1.png";
 
-
 const Contact = () => {
   const title = "Contact Us";
   return (
@@ -94,24 +93,39 @@ const Contact = () => {
                 <div className="col-xl-4_cont-right_details">
                   <ul className="col-xl-4_cont-right_details_list">
                     <li>
-                        <span>Call anytime</span>
-                        <p className="col-xl-4_cont-right_details_list_phone">
-                            <a href="tel:+998901234567" className="col-xl-4_cont-right_details_list_phone">+998901234567</a>
-                        </p>
+                      <span>Call anytime</span>
+                      <p className="col-xl-4_cont-right_details_list_phone">
+                        <a
+                          href="tel:+998901234567"
+                          className="col-xl-4_cont-right_details_list_phone"
+                        >
+                          +998901234567
+                        </a>
+                      </p>
                     </li>
                     <li>
-                        <span>Send Email</span>
-                        <p className="col-xl-4_cont-right_details_list_phone">
-                            <a href="tel:+998901234567" className="col-xl-4_cont-right_details_list_phone">+info@outdoorfactory.com</a>
-                        </p>
+                      <span>Send Email</span>
+                      <p className="col-xl-4_cont-right_details_list_phone">
+                        <a
+                          href="tel:+998901234567"
+                          className="col-xl-4_cont-right_details_list_phone"
+                        >
+                          +info@outdoorfactory.com
+                        </a>
+                      </p>
                     </li>
-                   
-                   
+
                     <li>
-                        <span>TASHKENT</span>
-                        <p className="col-xl-4_cont-right_details_list_phone">
-                            <a href="tel:+998901234567" className="col-xl-4_cont-right_details_list_phone">Ташкент -Узбекистан , Шайхантахурсий район, улица Укчи, 3-А дом</a>
-                        </p>
+                      <span>TASHKENT</span>
+                      <p className="col-xl-4_cont-right_details_list_phone">
+                        <a
+                          href="tel:+998901234567"
+                          className="col-xl-4_cont-right_details_list_phone"
+                        >
+                          Ташкент -Узбекистан , Шайхантахурсий район, улица
+                          Укчи, 3-А дом
+                        </a>
+                      </p>
                     </li>
                   </ul>
                 </div>
@@ -148,7 +162,7 @@ const Contact = () => {
           src="https://yandex.uz/map-widget/v1/?ll=69.322203%2C41.303646&mode=whatshere&whatshere%5Bpoint%5D=69.321825%2C41.303496&whatshere%5Bzoom%5D=16&z=17.2"
           width="100%"
           height="100%"
-         
+          title="Bizning videolar"
           allowFullScreen="true"
           style={{ position: "relative" }}
         ></iframe>
