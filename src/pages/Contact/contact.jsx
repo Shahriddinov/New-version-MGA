@@ -2,9 +2,12 @@ import React from "react";
 import "./contact.scss";
 import PageHero from "../../components/pageHero";
 import contactImg from "../../assests/images/contact-page-shape-1.png";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
-  const title = "Contact Us";
+     const { t } = useTranslation();
+  
+  const title = t('contact');
   return (
     <div className="contact">
       <PageHero title={title} />

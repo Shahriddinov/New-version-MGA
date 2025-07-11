@@ -4,8 +4,11 @@ import PageHero from "../../components/pageHero";
 
 import NewLetter from "../../components/newLetter";
 import HomeServices from "../../components/HomeServies";
+import { useTranslation } from "react-i18next";
 const Serves = () => {
-  const title = "Services ";
+     const { t } = useTranslation();
+  
+  const title = t('serves');
   return (
     <section className="section-serves">
       <PageHero title={title} />

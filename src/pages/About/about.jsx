@@ -4,9 +4,11 @@ import PageHero from "../../components/pageHero";
 import Partner from "../../components/Partner";
 import NewLetter from "../../components/newLetter";
 import Pession from "../../components/Pession";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
-  const title = "ABOUT";
+const { t } = useTranslation();
+  const title = t("about");
   return (
     <>
       <>

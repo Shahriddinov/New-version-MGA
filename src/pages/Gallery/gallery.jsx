@@ -11,11 +11,14 @@ import gallery5 from "../../assests/images/gallery/pro5.jpg";
 import gallery6 from "../../assests/images/gallery/pro6.jpg";
 import ModalCarousel from "./ModalImg/modalImg";
 import NewLetter from "../../components/newLetter";
+import { useTranslation } from "react-i18next";
 
 const Gallery = () => {
+    const { t } = useTranslation();
+ 
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  const title = "Gallery";
+  const title = t('gallery');
 
   // Rasm ma'lumotlari
   const galleryImages = [

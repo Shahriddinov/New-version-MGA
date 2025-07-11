@@ -1,6 +1,9 @@
 import React from "react";
 import "./style.scss";
+import { useTranslation } from "react-i18next";
+
 const PageHero = ({ title }) => {
+   const { t } = useTranslation();
   return (
     <div className="page-header">
       <div className="page-hero"></div>
@@ -9,7 +12,7 @@ const PageHero = ({ title }) => {
               <ul className="bread-crumb">
                 <li className="li-pull">
                   <a href="/" className="breads">
-                    Home
+                    {t("main")}
                   </a>
                 </li>
                 <li>
