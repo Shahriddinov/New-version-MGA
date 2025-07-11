@@ -56,16 +56,7 @@ const Hero = () => {
           ))}
         </Swiper>
 
-        <div className="container" style={{ position: "relative" }}>
-          <div className="navButtons">
-            <div ref={prevRef} className="custom-prev">
-              ←
-            </div>
-            <div ref={nextRef} className="custom-next">
-              →
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
   );

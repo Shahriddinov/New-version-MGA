@@ -19,6 +19,7 @@
     }
     .contact-row {
       display: flex;
+      align-items: center;
       gap: 30px;
 
       .col-xl-8 {
@@ -324,3 +325,38 @@
     transform: translateX(-30px);
   }
 }
+ @media (max-width: 1190px){
+  .contact-row{
+    flex-direction: column;
+    .col-xl-8{
+      width: 100% !important;
+    }
+    .col-xl-4{
+      width: 100% !important;
+      &_cont-right{
+        margin-left: 0 !important;
+      }
+    }
+  }
+ }
+  @media (max-width: 768px){
+     .contact-row{
+    flex-direction: column;
+    .col-xl-8{
+      width: 100% !important;
+      .form-group{
+        flex-direction: column;
+        gap: 0 !important;
+      }
+      .col-xl-6{
+        width: 100% !important;
+      }
+    }
+    .col-xl-4{
+      width: 100% !important;
+      &_cont-right{
+        margin-left: 0 !important;
+      }
+    }
+  }
+  }

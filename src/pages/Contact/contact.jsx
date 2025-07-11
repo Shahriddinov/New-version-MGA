@@ -105,24 +105,8 @@ const Contact = () => {
                             <a href="tel:+998901234567" className="col-xl-4_cont-right_details_list_phone">+info@outdoorfactory.com</a>
                         </p>
                     </li>
-                    <li>
-                        <span>Visit Office</span>
-                        <p className="col-xl-4_cont-right_details_list_phone">
-                            <a href="tel:+998901234567" className="col-xl-4_cont-right_details_list_phone">Uniq Office, Ayazağa Cad. 4/B 34396 Sariyer, ISTANBUL</a>
-                        </p>
-                    </li>
-                    <li>
-                        <span>USA</span>
-                        <p className="col-xl-4_cont-right_details_list_phone">
-                            <a href="tel:+998901234567" className="col-xl-4_cont-right_details_list_phone">4 Deveaux Ct S.Barrington, Il 60010</a>
-                        </p>
-                    </li>
-                    <li>
-                        <span>MILAN</span>
-                        <p className="col-xl-4_cont-right_details_list_phone">
-                            <a href="tel:+998901234567" className="col-xl-4_cont-right_details_list_phone">Via Sant'Orsola 8/A Milan, Lombardy 20148, IT</a>
-                        </p>
-                    </li>
+                   
+                   
                     <li>
                         <span>TASHKENT</span>
                         <p className="col-xl-4_cont-right_details_list_phone">

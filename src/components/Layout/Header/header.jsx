@@ -54,7 +54,7 @@ const Header = () => {
                           />
                         </div>
                         <div className="main_header_top_inner_right_content_address_topBox_li_texts">
-                          <p className="ps">Call anytime</p>
+                          <p className="ps">{t("call")}</p>
                           <h5 className="h5">
                             <a className="h5" href="tel:+99877 0124004">
                               +998 77 012 40 04
@@ -69,13 +69,13 @@ const Header = () => {
                           />
                         </div>
                         <div className="main_header_top_inner_right_content_address_topBox_li_texts">
-                          <p className="ps">Send email</p>
+                          <p className="ps">{t("send")}</p>
                           <h5 className="h5">
                             <a
                               className="h5"
-                              href="mailto:info@outdoorfactory.com"
+                              href="mailto:info@mgareklama.com"
                             >
-                              info@outdoorfactory.com
+                              info@mgareklama.com
                             </a>
                           </h5>
                         </div>
@@ -142,7 +142,7 @@ const Header = () => {
                         className={location.pathname === "/" ? "current" : ""}
                       >
                         <Link to="/" className="current_items">
-                          Main
+                         {t("main")}
                         </Link>
                         {location.pathname === "/" && (
                           <span className="current_border"></span>

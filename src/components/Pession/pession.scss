@@ -33,7 +33,7 @@
           width: 250px;
           height: 270px;
 
-          margin-top: 200px;
+         
         }
         .a {
           background-image: url("../../assests//images/a.png");
@@ -98,7 +98,44 @@
         width: 100%;
         .col-2{
           width: 35%;
-          border:1px solid red;
+         
+        }
+      }
+      &_rights{
+        width: 100%;
+      }
+    }
+    @media (max-width: 1190px){
+      padding-bottom: 60px;
+      flex-direction: column;
+      &_lefts{
+        width: 100%;
+        .col-2{
+          width: 35%;
+        
+          .m,
+          .g,
+          a{
+            width: 350px;
+          }
+        }
+      }
+      &_rights{
+        width: 100%;
+        .aboutCompany{
+          justify-content: left;
+          padding: 0;
+          margin-top: 60px;
+        }
+        .aboutCompany__title{
+          font-size: 45px;
+        }
+        .aboutCompany__text{
+          font-size: 20px;
+        }
+        .aboutCompany__btn{
+          font-size: 18px;
+          padding: 16px 20px;
         }
       }
     }

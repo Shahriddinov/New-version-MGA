@@ -20,8 +20,11 @@ import hoverImg6 from "../../assests/images/s/TABLICHKA.png";
 import hoverImg7 from "../../assests/images/s/UV.png";
 import hoverImg8 from "../../assests/images/s/YOLLANTIRMA.png";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 function HomeServices() {
+    const { t } = useTranslation();
+  
   const servicesData = [
     {
       id: 1,
@@ -85,7 +88,7 @@ function HomeServices() {
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1500"
         >
-          Bizning Servies xizmatlar
+          {t("servies")}
         </div>
       </div>
 

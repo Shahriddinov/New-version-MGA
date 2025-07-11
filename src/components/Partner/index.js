@@ -60,7 +60,7 @@ export default function Partner() {
             spaceBetween: 50,
           },
           1199: {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 100,
           },
         }}

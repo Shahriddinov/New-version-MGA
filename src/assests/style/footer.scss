@@ -5,6 +5,9 @@
   background-color: #3c3531;
   margin-top: -110px;
   z-index: 1;
+  .rowss {
+    display: flex;
+  }
   &-bg {
     position: absolute;
     top: 0;
@@ -62,7 +65,7 @@
             text-align: center;
             color: #ffffff;
             font-size: 15px;
-            background-color: #f0e3cc;
+            background-color: #2f2a27;
             border-radius: 50%;
             overflow: hidden;
             transition: all 500ms ease;
@@ -223,3 +226,33 @@
     }
   }
 }
+@media (max-width: 1190px) {
+  .rowss {
+    flex-wrap: wrap;
+
+    .site-footer__top_col3 {
+      width: 33%;
+      margin-bottom: 60px;
+    }
+     .site-footer__top_col3:nth-child(4) {
+      .footer-widget_explore {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
+ @media (max-width: 768px){
+  .rowss {
+    flex-wrap: wrap;
+
+    .site-footer__top_col3 {
+      width: 50%;
+      margin-bottom: 60px;
+    }
+     .site-footer__top_col3:nth-child(3) {
+      .footer-widget_explore {
+        margin-left: 0 !important;
+      }
+    }
+  }
+ }
