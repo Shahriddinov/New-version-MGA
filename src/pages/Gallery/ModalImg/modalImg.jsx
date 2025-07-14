@@ -6,17 +6,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./modalImg.scss";
-import img1 from "../../../assests/images/gallery/pro1.jpg";
-import img2 from "../../../assests/images/gallery/pro2.png"; // 3-chi rasm uchun
-import img3 from "../../../assests/images/gallery/pro3.png";
 
-const ModalCarousel = ({ onClose }) => {
+const ModalCarousel = ({ onClose, galleryImages = [] }) => {
   return (
     <div className="modal-gallery">
       <div className="modal-gallery__content">
         <button className="modal-gallery__close" onClick={onClose}>
           <FaTimes />
         </button>
+
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={30}
@@ -27,9 +25,11 @@ const ModalCarousel = ({ onClose }) => {
           loop
           className="custom-swiper"
         >
-          <SwiperSlide><img src={img1} alt="slide1" /></SwiperSlide>
-          <SwiperSlide><img src={img2} alt="slide2" /></SwiperSlide>
-          <SwiperSlide><img src={img3} alt="slide3" /></SwiperSlide>
+          {galleryImages.map((img, index) => (
+            <SwiperSlide key={index}>
+              <img src={img.image} alt={`slide-${index + 1}`} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>

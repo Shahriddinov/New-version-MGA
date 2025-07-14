@@ -1,55 +1,52 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import {sendFullContact, sendInfoContact } from "./index";
+import { sendContact, sendEmail } from "./index";
 
 const initialState = {
-    loading: false,
-    sendPostData: null,
-    sendPostLoading: true,
-    sendFullData: null,
-    sendFullLoading: true,
-    error: null,
+  loading: false,
+  sendEmailData: null,
+  sendEmailLoading: true,
+  sendContactData: null,
+  sendContactLoading: true,
+  error: null,
 };
 
 const senQuestion = createSlice({
-    name: "contact",
-    initialState,
-    reducers: {
-        resetContact: (state) => {
-            state.sendFullData = null;
-        },
+  name: "contact",
+  initialState,
+  reducers: {
+    resetContact: (state) => {
+      state.sendFullData = null;
     },
-    extraReducers: (build) => {
-
-
-        build
-            .addCase(sendFullContact.pending, (state) => {
-                state.sendFullLoading = true;
-            })
-            .addCase(sendFullContact.fulfilled, (state, action) => {
-                state.sendFullLoading = false;
-                state.sendFullData = action.payload;
-                console.log(action.payload);
-            })
-            .addCase(sendFullContact.rejected, (state, action) => {
-                state.sendFullLoading = false;
-                state.error = action.error.message;
-            });
-        build
-            .addCase(sendInfoContact.pending, (state) => {
-                state.sendPostLoading = true;
-            })
-            .addCase(sendInfoContact.fulfilled, (state, action) => {
-                state.sendPLoading = false;
-                state.sendPostData = action.payload;
-                console.log(action.payload);
-            })
-            .addCase(sendInfoContact.rejected, (state, action) => {
-                state.sendPostLoading = false;
-                state.error = action.error.message;
-            });
-    },
-
+  },
+  extraReducers: (build) => {
+    build
+      .addCase(sendContact.pending, (state) => {
+        state.sendFullLoading = true;
+      })
+      .addCase(sendContact.fulfilled, (state, action) => {
+        state.sendContactLoading = false;
+        state.sendContactData = action.payload;
+        console.log(action.payload);
+      })
+      .addCase(sendContact.rejected, (state, action) => {
+        state.sendContactLoading = false;
+        state.error = action.error.message;
+      });
+    build
+      .addCase(sendEmail.pending, (state) => {
+        state.sendEmailLoading = true;
+        state.error = null;
+      })
+      .addCase(sendEmail.fulfilled, (state, action) => {
+        state.sendEmailLoading = false;
+        state.sendEmailData = action.payload;
+      })
+      .addCase(sendEmail.rejected, (state, action) => {
+        state.sendEmailLoading = false;
+        state.error = action.error.message;
+      });
+  },
 });
 
 export const { resetContact } = senQuestion.actions;

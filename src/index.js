@@ -10,7 +10,9 @@ import store from "./reduxToolkit/store";
 import {I18nextProvider} from "react-i18next";
 import i18n from "./serves/in18";
 import GrayContextProvider from "./context/GrayContext";
-
+import "aos/dist/aos.css";
+import AOS from "aos";
+AOS.init();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <I18nextProvider i18n={i18n}>

@@ -1,7 +1,8 @@
 {
-  "name": "new-reklama",
+  "name": "mga-reklama",
   "version": "0.1.0",
   "private": true,
+   "proxy": "https://api.mgareklama.com",
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@react-spring/web": "^9.7.4",
