@@ -150,23 +150,24 @@ const Contact = () => {
                 <div className="col-xl-4_cont-right_details">
                   <ul className="col-xl-4_cont-right_details_list">
                     <li>
-                      <span>Call anytime</span>
+                      <span>{t("call")}</span>
                       <p className="col-xl-4_cont-right_details_list_phone">
                         <a href="tel:+998901234567">+998901234567</a>
+
                       </p>
                     </li>
                     <li>
-                      <span>Send Email</span>
+                      <span>{t("send")}</span>
                       <p className="col-xl-4_cont-right_details_list_phone">
-                        <a href="mailto:info@outdoorfactory.com">
-                          info@outdoorfactory.com
+                        <a href="mailto:info@mgareklama.com">
+                          info@mgareklama.com
                         </a>
                       </p>
                     </li>
                     <li>
-                      <span>TASHKENT</span>
+                      <span>Uzbekistan</span>
                       <p className="col-xl-4_cont-right_details_list_phone">
-                        Ташкент - Узбекистан, улица Укчи, 3-А дом
+                        {t("address")}
                       </p>
                     </li>
                   </ul>

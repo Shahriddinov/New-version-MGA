@@ -45,7 +45,7 @@ export default function Partner() {
                   breakpoints={{
                     0: {
                       slidesPerView: 2,
-                      spaceBetween: 30,
+                      spaceBetween: 20,
                     },
                     375: {
                       slidesPerView: 2,
@@ -57,14 +57,30 @@ export default function Partner() {
                     },
                     767: {
                       slidesPerView: 4,
-                      spaceBetween: 50,
+                      spaceBetween: 40,
                     },
                     991: {
                       slidesPerView: 5,
                       spaceBetween: 50,
                     },
                     1199: {
-                      slidesPerView: 4,
+                      slidesPerView: 6,
+                      spaceBetween: 60,
+                    },
+                    1440: {
+                      slidesPerView: 7,
+                      spaceBetween: 70,
+                    },
+                    1600: {
+                      slidesPerView: 8,
+                      spaceBetween: 80,
+                    },
+                    1920: {
+                      slidesPerView: 9,
+                      spaceBetween: 90,
+                    },
+                    2560: {
+                      slidesPerView: 10,
                       spaceBetween: 100,
                     },
                   }}

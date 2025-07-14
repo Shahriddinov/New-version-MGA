@@ -5,8 +5,9 @@ import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 
 export default function Pession() {
-    const { t } = useTranslation();
-  
+  const { t } = useTranslation();
+  const paragraphs = t("desAbout").split(". ").filter(Boolean); // Har bir gapdan keyin paragraflashtirish
+
   useEffect(() => {
     AOS.init({
       duration: 1000, // animatsiya davomiyligi (ms)
@@ -45,17 +46,16 @@ export default function Pession() {
             </div>
           </div>
           <div className="pession_rows_rights">
-            <section className="aboutCompany" data-aos="zoom-in"
-               >
+            <section className="aboutCompany" data-aos="zoom-in">
               <div className="aboutCompany__content" data-aos="fade-up">
                 <h2 className="aboutCompany__title">
-                  ÜZERİNİZDEKİ <span className="highlight">BASKIYI</span>{" "}
-                  ALIRIZ!
+                  {t("aboutUs")}
                 </h2>
-                <p className="aboutCompany__text">
-                  {t("desAbout")}
-                </p>
-                <button className="aboutCompany__btn">TÜMÜNÜ OKU</button>
+                {paragraphs.map((sentence, index) => (
+                  <p key={index} className="text-base leading-7 text-gray-700">
+                    {sentence.trim().endsWith(".") ? sentence : sentence + "."}
+                  </p>
+                ))}
               </div>
             </section>
           </div>

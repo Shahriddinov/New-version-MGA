@@ -44,8 +44,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-wigdet_text-box">
                   <p className="footer-widget_text-box_des">
-                    Outdoor Factory, founded in 2010, is a design and build
-                    company specializing in making dreams come true.
+                    {t("footerText")}
                   </p>
                 </div>
                 <div className="footer-widget__social">
@@ -87,7 +86,7 @@ const Footer = () => {
                   data-aos-delay="300"
                   data-aos-duration="1000"
                 >
-                  <h3 className="footer-widget_explore__exTitle">Quick Menu</h3>
+                  <h3 className="footer-widget_explore__exTitle">{t("footMenu")}</h3>
                   <ul className="footer-widget_explore-list clearfix">
                     <li>
                       <a href="/about" className="lists">
@@ -120,6 +119,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+          
             <div className="site-footer__top_col3 fadeInUp animated">
               <div className="footer-widget">
                 <div
@@ -128,48 +128,7 @@ const Footer = () => {
                   data-aos-delay="300"
                   data-aos-duration="1000"
                 >
-                  <h3 className="footer-widget_explore__exTitle">Our Work</h3>
-                  <ul className="footer-widget_explore-list clearfix">
-                    <li>
-                      <a href="/about" className="lists">
-                        {" "}
-                        <MdOutlineNavigateNext /> Theme Parks
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/about" className="lists">
-                        {" "}
-                        <MdOutlineNavigateNext />
-                        Museums
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/about" className="lists">
-                        {" "}
-                        <MdOutlineNavigateNext />
-                        City Architecture
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/about" className="lists">
-                        {" "}
-                        <MdOutlineNavigateNext />
-                        Digital Experience
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="site-footer__top_col3 fadeInUp animated">
-              <div className="footer-widget">
-                <div
-                  className="footer-widget_explore clearfix"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                  data-aos-duration="1000"
-                >
-                  <h3 className="footer-widget_explore__exTitle">Our Work</h3>
+                  <h3 className="footer-widget_explore__exTitle">{t("work")}</h3>
                   <ul className="footer-widget_explore-list clearfix">
                     <li className="foot-icon">
                       <div className="call-icon">
@@ -213,7 +172,7 @@ const Footer = () => {
                             className="call-text-aa"
                             href="mailto:info@outdoorfactory.com"
                           >
-                            Toshkent shahar 61 k
+                           {t("address")}
                           </a>
                         </p>
                       </div>
