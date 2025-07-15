@@ -61,10 +61,10 @@ const Contact = () => {
               <div className="col-xl-8_cont-left">
                 <div className="col-xl-8_cont-left_cont-title">
                   <span className="col-xl-8_cont-left_cont-title_taglines">
-                    Contact Us
+                    {t("contact")}
                   </span>
                   <h2 className="col-xl-8_cont-left_cont-title_heading">
-                    Feel Free to Write
+                   {t("feel")}
                   </h2>
                   <div className="title-line"></div>
                 </div>
@@ -136,7 +136,7 @@ const Contact = () => {
                     </div>
                     <div className="btn-box">
                       <button type="submit" className="form-btn">
-                        Send a Message
+                       {t("sends")}
                       </button>
                     </div>
                   </form>
@@ -152,7 +152,7 @@ const Contact = () => {
                     <li>
                       <span>{t("call")}</span>
                       <p className="col-xl-4_cont-right_details_list_phone">
-                        <a href="tel:+998901234567">+998901234567</a>
+                        <a href="tel:+998770124004">+998 77 012 40 04</a>
 
                       </p>
                     </li>

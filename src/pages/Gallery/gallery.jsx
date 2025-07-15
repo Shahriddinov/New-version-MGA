@@ -71,16 +71,7 @@ const Gallery = () => {
             ))}
           </div>
 
-          <iframe
-            width="100%"
-            height="658"
-            src="https://www.youtube-nocookie.com/embed/55_3tE4tNno?si=0QoqzGLYnPJqg8bE"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
+         
         </div>
       </section>
 
