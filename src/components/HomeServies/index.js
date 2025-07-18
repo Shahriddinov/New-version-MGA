@@ -37,7 +37,7 @@ function HomeServices({ servicesData }) {
                   <motion.a
                     key={index}
                     className="services_bad_double_serviceAbout"
-                    href="/gallery"
+
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.2 }}
