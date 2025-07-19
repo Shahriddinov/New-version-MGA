@@ -9,12 +9,17 @@ const Language = () => {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.language);
 
-  const handleChangeLanguage = (lang) => {
-    if (lang === language) return;
-    i18next.changeLanguage(lang)
-      .then(() => dispatch(languageChange(lang)))
-      .catch((err) => console.error("Language change error:", err));
-  };
+    const handleChangeLanguage = (lang) => {
+        if (lang === language) return;
+
+        i18next.changeLanguage(lang)
+            .then(() => {
+                localStorage.setItem("language", lang); // 🔥 localStorage ga shu yerda yozamiz
+                dispatch(languageChange(lang));
+                window.location.reload(); // (Agar API tilga bog‘liq bo‘lsa, bu ham kerak bo'lishi mumkin)
+            })
+            .catch((err) => console.error("Language change error:", err));
+    };
 
   return (
     <div className="lang-simple">

@@ -30,7 +30,7 @@ function HomeServices({ servicesData }) {
       <div className="services_bad">
         <div className="container">
           <div className="services_bad_double">
-              {servicesData.map((item, index) => {
+              {servicesData?.map((item, index) => {
                   const virtualId = servicesData.length - index;
 
                   return (
@@ -49,10 +49,10 @@ function HomeServices({ servicesData }) {
                               <img
                                   className="services_bad_double_serviceAbout_seven"
                                   src={item.image}
-                                  alt={item.title || "Service"}
+                                  alt={item?.title || "Service"}
                               />
                               <div className="services_bad_double_serviceAbout_laser">
-                                 {item.title}
+                                 {item?.title}
                               </div>
                               <div>
                                   <FaPlus className="services_bad_double_serviceAbout_plus" />
