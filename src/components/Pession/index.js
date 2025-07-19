@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 
 export default function Pession() {
   const { t } = useTranslation();
-  const paragraphs = t("desAbout").split(". ").filter(Boolean); // Har bir gapdan keyin paragraflashtirish
 
   useEffect(() => {
     AOS.init({
@@ -51,11 +50,11 @@ export default function Pession() {
                 <h2 className="aboutCompany__title">
                   {t("aboutUs")}
                 </h2>
-                {paragraphs.map((sentence, index) => (
-                  <p key={index} className="text-base leading-7 text-gray-700">
-                    {sentence.trim().endsWith(".") ? sentence : sentence + "."}
+
+                  <p  className="text-base leading-7 text-gray-700">
+                    {t("desAbout")}
                   </p>
-                ))}
+
               </div>
             </section>
           </div>

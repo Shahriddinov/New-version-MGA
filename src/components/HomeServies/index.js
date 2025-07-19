@@ -30,35 +30,39 @@ function HomeServices({ servicesData }) {
       <div className="services_bad">
         <div className="container">
           <div className="services_bad_double">
-            {servicesData.map(
-              (item, index) =>
-                item.image &&
-                item.title && ( // faqat image va title mavjud bo‘lsa chiqaramiz
-                  <motion.a
-                    key={index}
-                    className="services_bad_double_serviceAbout"
+              {servicesData.map((item, index) => {
+                  const virtualId = servicesData.length - index;
 
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.2 }}
-                    viewport={{ once: true }}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <div className="zoom"></div>
-                    <img
-                      className="services_bad_double_serviceAbout_seven"
-                      src={item.image}
-                      alt={item.title || "Service"}
-                    />
-                    <div className="services_bad_double_serviceAbout_laser">
-                      {item.title}
-                    </div>
-                    <div>
-                      <FaPlus className="services_bad_double_serviceAbout_plus" />
-                    </div>
-                  </motion.a>
-                )
-            )}
+                  return (
+                      item.image &&
+                      item.title && (
+                          <motion.a
+                              key={virtualId}
+                              className="services_bad_double_serviceAbout"
+                              initial={{ opacity: 0, y: 50 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.5, delay: index * 0.2 }}
+                              viewport={{ once: true }}
+                              whileHover={{ scale: 1.05 }}
+                          >
+                              <div className="zoom"></div>
+                              <img
+                                  className="services_bad_double_serviceAbout_seven"
+                                  src={item.image}
+                                  alt={item.title || "Service"}
+                              />
+                              <div className="services_bad_double_serviceAbout_laser">
+                                 {item.title}
+                              </div>
+                              <div>
+                                  <FaPlus className="services_bad_double_serviceAbout_plus" />
+                              </div>
+                          </motion.a>
+                      )
+                  );
+              })}
+
+
           </div>
         </div>
       </div>

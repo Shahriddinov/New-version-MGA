@@ -4,9 +4,11 @@ import { useDispatch } from "react-redux";
 import { sendEmail } from "../../reduxToolkit/messageSlice";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {useTranslation} from "react-i18next";
 export default function NewLetter() {
   const [email, setEmail] = useState("");
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,7 +32,7 @@ export default function NewLetter() {
           <div className="newLetter__inners_shapes1"></div>
           <div className="newLetter__inners_lefts">
             <div className="newLetter__inners_lefts_title-new">
-              Join Our Newsletter
+              {t("get")}
             </div>
           </div>
           <div className="newLetter__inners_rights">
@@ -51,7 +53,7 @@ export default function NewLetter() {
                   type="submit"
                   className="newLetter__inners_rights_forms_input-box_button"
                 >
-                  Subscribe
+                  {t("sub")}
                 </button>
               </div>
             </form>

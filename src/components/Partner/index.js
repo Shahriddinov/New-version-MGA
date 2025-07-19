@@ -25,7 +25,7 @@ export default function Partner() {
     <section className="brand-one">
       <div className="container">
         <div className="brand-one_inner-partner">
-          <div className="rows">
+          <div className="rows al">
             <div className="brand-one_inner-partner_col-3">
               <div className="brand-one_inner-partner_col-3_titles">
                 <h3>REFERENCES</h3>

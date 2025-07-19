@@ -170,7 +170,6 @@ const Footer = () => {
                         <p className="call-text-pp">
                           <a
                             className="call-text-aa"
-                            href="mailto:info@outdoorfactory.com"
                           >
                            {t("address")}
                           </a>

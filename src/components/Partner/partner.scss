@@ -6,6 +6,9 @@
   background: #ffffff;
 padding: 14px 0 10px;
   z-index: 1;
+  .al{
+    align-items: center;
+  }
   &_inner-partner {
     position: relative;
     display: block;
@@ -17,7 +20,7 @@ padding: 14px 0 10px;
       &_titles {
         position: relative;
         display: block;
-       
+
         margin-top: 9px;
         font-size: 1.75rem;
       }
