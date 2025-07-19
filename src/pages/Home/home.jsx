@@ -12,10 +12,11 @@ import { ToastContainer } from "react-toastify";
 const Home = () => {
   const dispatch = useDispatch();
   const services = useSelector((state) => state.servicesSlider?.servicesData);
+    const language = useSelector((state) => state.language.language);
 
   useEffect(() => {
     dispatch(getServices());
-  }, [dispatch]);
+  }, [dispatch, language]);
   return (
     <div className="home">
       <Hero />
