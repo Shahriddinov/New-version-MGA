@@ -92,6 +92,13 @@
         }
       }
     }
+
+    @media only screen and (max-width: 430px) {
+      margin-top: 10rem;
+      &_lefts{
+        margin-top: 4rem;
+      }
+    }
     @media (max-width: 768px){
       flex-direction: column;
       &_lefts{

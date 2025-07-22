@@ -175,7 +175,20 @@
     }
   }
 }
-
+@media only screen and (max-width: 430px){
+  .services {
+    &_iServices{
+      width: 100%;
+      height: 150px;
+    }
+    &_bad_double_serviceAbout_laser{
+      margin-top: 10rem !important;
+    }
+    &_bad_double_serviceAbout_plus{
+      display: none;
+    }
+  }
+}
 @media (max-width: 562px) {
   .services {
     &_bad {

@@ -61,6 +61,13 @@ padding: 14px 0 10px;
     }
   }
 }
+@media only screen and (max-width: 430px) {
+  .brand-one_inner-partner_col-3{
+    width: 100%;
+    text-align: center;
+    display: block !important;
+  }
+}
 @media (max-width: 1190px){
   .rows{
     flex-direction: column;

@@ -160,6 +160,27 @@
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+@media only screen and (max-width: 430px) {
+  .newLetter{
+    margin-top: 40px;
+    &__inners{
+      padding: 30px;
+    }
+  }
+  .newLetter__inners_lefts{
+    width: 100%;
+  }
+  .newLetter__inners_rights_forms_input-box_input{
+    padding-right: 0;
+    height: 50px;
+  }
+  .newLetter__inners_rights_forms_input-box_button{
+
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+  }
+}
 @media (max-width: 1190px){
   .newLetter__inners {
     flex-direction: column;

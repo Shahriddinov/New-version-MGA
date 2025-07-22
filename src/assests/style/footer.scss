@@ -256,3 +256,22 @@
     }
   }
  }
+@media only screen and (max-width: 430px) {
+  .rowss {
+    flex-wrap: wrap;
+
+    .site-footer__top_col3 {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    .site-footer__top_col3:nth-child(3) {
+      .footer-widget_explore {
+        margin-left: 0 !important;
+      }
+    }.site-footer__top_col3:nth-child(2) {
+      .footer-widget_explore {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
