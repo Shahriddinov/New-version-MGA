@@ -3,7 +3,6 @@
   z-index: 9999;
   background-color: #112337;
   text-align: center;
-  //display: none;
   top: 0;
   right: 0;
   bottom: 0;
@@ -13,22 +12,22 @@
     transform: translate(-50%, -50%);
     position: absolute;
     left: 50%;
-    
     top: 50%;
-    .fw{
+
+    .fw {
       display: flex;
       align-items: center;
       gap: 20px;
       font-size: 35px;
     }
-    .plase{
+
+    .plase {
       width: 100px;
       height: 100px;
       border-radius: 100%;
     }
 
     .waviy {
-
       margin-top: 20px;
       font-size: 70px;
       display: flex;
@@ -41,35 +40,56 @@
         display: inline-block;
         color: #fff;
         animation: waviy 1s infinite;
-        animation-delay: .1s;
-
+        animation-delay: 0.1s;
 
         &:nth-child(2) {
-          animation-delay: .2s;
+          animation-delay: 0.2s;
         }
 
         &:nth-child(3) {
-          animation-delay: .3s;
+          animation-delay: 0.3s;
         }
 
         &:nth-child(4) {
-          animation-delay: .4s;
+          animation-delay: 0.4s;
         }
 
         &:nth-child(5) {
-          animation-delay: .5s;
+          animation-delay: 0.5s;
         }
 
+        &:nth-child(6) {
+          animation-delay: 0.6s;
+        }
+
+        &:nth-child(7) {
+          animation-delay: 0.7s;
+        }
       }
     }
   }
 }
 
-@keyframes waviy {
-  0%, 40%, 100% {
-    transform: translateY(0)
-  }
-  20% {
-    transform: translateY(-15px)
+/* 📱 Responsive styles for mobile */
+@media (max-width: 480px) {
+  .loading-page {
+    .preloaders {
+      .waviy {
+        font-size: 40px;
+        gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      .fw {
+        gap: 10px;
+        font-size: 20px;
+      }
+
+      .plase {
+        width: 60px;
+        height: 60px;
+      }
+    }
   }
 }
